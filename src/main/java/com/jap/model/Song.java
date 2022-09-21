@@ -1,5 +1,7 @@
 package com.jap.model;
 
+import java.util.Objects;
+
 public class Song {
     private int songId;
     private String songName;
@@ -58,5 +60,27 @@ public class Song {
         this.songPath = songPath;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Song song = (Song) o;
+        return songId == song.songId && songName.equals(song.songName) && albumName.equals(song.albumName) && genre.equals(song.genre) && songPath.equals(song.songPath);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(songId, songName, albumName, genre, songPath);
+    }
+
+    @Override
+    public String toString() {
+        return "Song{" +
+                "songId=" + songId +
+                ", songName='" + songName + '\'' +
+                ", albumName='" + albumName + '\'' +
+                ", genre='" + genre + '\'' +
+                ", songPath='" + songPath + '\'' +
+                '}';
+    }
 }

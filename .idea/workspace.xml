@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="created a SongRepository.java class in repository package.">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added getters and setters in song class">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +129,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663724907456</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added fields in song class">
+      <created>1663725137142</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1663725137142</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added constructors in song class">
+      <created>1663725245166</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1663725245166</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added getters and setters in song class">
+      <created>1663725362406</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1663725362406</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,7 +181,10 @@
     <MESSAGE value="created a MusicPlayerRepository.java class in repository package." />
     <MESSAGE value="created a PlaylistRepository.java class in repository package." />
     <MESSAGE value="created a SongRepository.java class in repository package." />
-    <option name="LAST_COMMIT_MESSAGE" value="created a SongRepository.java class in repository package." />
+    <MESSAGE value="added fields in song class" />
+    <MESSAGE value="added constructors in song class" />
+    <MESSAGE value="added getters and setters in song class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added getters and setters in song class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
