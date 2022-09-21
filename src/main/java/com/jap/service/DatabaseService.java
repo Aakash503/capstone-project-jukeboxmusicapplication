@@ -9,7 +9,14 @@ public class DatabaseService {
 
     private Connection connection;
 
+    public DatabaseService() {
+    }
+
     public DatabaseService(Connection connection) {
         this.connection = connection;
+    }
+
+    public Connection getConnection() {
+        return connection;
     }
 }
