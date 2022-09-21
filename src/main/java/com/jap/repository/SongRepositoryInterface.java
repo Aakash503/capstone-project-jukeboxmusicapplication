@@ -1,7 +1,7 @@
 package com.jap.repository;
 
-import com.sun.jdi.connect.spi.Connection;
+import java.sql.Connection;
 
-public interface SongRepositoryInterface {
-    boolean addSong(Connection connection);
+public interface SongRepositoryInterface<T> {
+    boolean addSong(Connection connection, T object);
 }
