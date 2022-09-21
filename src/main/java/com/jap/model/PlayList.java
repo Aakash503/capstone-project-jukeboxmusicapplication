@@ -1,33 +1,56 @@
 package com.jap.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class PlayList {
-    private int playlistId;
-    private String playlistName;
+    private int id;
+    private String name;
+    private Song song;
+    private List<Song> list;
 
     public PlayList() {
+        list = new ArrayList<>();
     }
 
-    public PlayList(int playlistId, String playlistName) {
-        this.playlistId = playlistId;
-        this.playlistName = playlistName;
+    public PlayList(int id, String name, Song song) {
+        this.id = id;
+        this.name = name;
+        this.song = song;
+
     }
 
-    public int getPlaylistId() {
-        return playlistId;
+    public int getId() {
+        return id;
     }
 
-    public void setPlaylistId(int playlistId) {
-        this.playlistId = playlistId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getPlaylistName() {
-        return playlistName;
+    public String getName() {
+        return name;
     }
 
-    public void setPlaylistName(String playlistName) {
-        this.playlistName = playlistName;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<Song> getList() {
+        return list;
+    }
+
+    public void setList(List<Song> list) {
+        this.list = list;
+    }
+
+    public Song getSong() {
+        return song;
+    }
+
+    public void setSong(Song song) {
+        this.song = song;
     }
 
     @Override
@@ -35,16 +58,22 @@ public class PlayList {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PlayList playList = (PlayList) o;
-        return playlistId == playList.playlistId && playlistName.equals(playList.playlistName);
+        return id == playList.id && name.equals(playList.name) && song.equals(playList.song) && list.equals(playList.list);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(playlistId, playlistName);
+        return Objects.hash(id, name, song, list);
     }
 
     @Override
     public String toString() {
-        return "PlayList{" + "playlistId=" + playlistId + ", playlistName='" + playlistName + '\'' + '}';
+        return "PlayList{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", song=" + song +
+                ", list=" + list +
+                '}';
     }
 }
+

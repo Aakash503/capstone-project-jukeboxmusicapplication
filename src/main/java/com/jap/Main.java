@@ -10,7 +10,8 @@ public class Main {
         try {
             databaseService.connect();
         } catch (SQLException e) {
-            System.out.println("Error while connecting to the database");
+            System.err.println("Error while connecting to the database");
+            e.printStackTrace();
         } finally {
             databaseService.printConnectionStatus();
         }

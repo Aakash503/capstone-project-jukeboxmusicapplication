@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="created printConnectionStatus method in DatabaseService class">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="created dataservice object for Databaseservice class in main method and print connection status.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepositoryInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/PlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/model/PlayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/MusicPlayerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DatabaseTable/databasetabl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/songs/song_table_queries.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Sqlquery/sqlquery" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/database_query.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -39,11 +49,18 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "last_opened_file_path": "C:/Users/acer/IdeaProjects/pc-1-student-database",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
+      <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\sql" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jap.Main" />
@@ -248,7 +265,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663729399707</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="created dataservice object for Databaseservice class in main method and print connection status.">
+      <created>1663735303311</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1663735303311</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,7 +287,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ading fields to song class" />
     <MESSAGE value="creating a DatabaseService.java class" />
     <MESSAGE value="creating a MusicPlayerRepositoryService.java class" />
     <MESSAGE value="creating a directory folder for sql query." />
@@ -288,7 +311,8 @@
     <MESSAGE value="created getConnection method in databaseservice connection object" />
     <MESSAGE value="created connect method in DatabaseService class" />
     <MESSAGE value="created printConnectionStatus method in DatabaseService class" />
-    <option name="LAST_COMMIT_MESSAGE" value="created printConnectionStatus method in DatabaseService class" />
+    <MESSAGE value="created dataservice object for Databaseservice class in main method and print connection status." />
+    <option name="LAST_COMMIT_MESSAGE" value="created dataservice object for Databaseservice class in main method and print connection status." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
