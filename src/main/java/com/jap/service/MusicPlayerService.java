@@ -1,4 +1,5 @@
-package com.jap.Service;
+package com.jap.service;
 
 public class MusicPlayerService {
+
 }
