@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added equals, hashcode and tostring methods in song class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/PlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/model/PlayList.java" afterDir="false" />
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added equals,hashcode and tostring methods in PlayList.java class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +158,35 @@
       <option name="project" value="LOCAL" />
       <updated>1663725569602</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="created fields in PlayList.java class">
+      <created>1663725906742</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1663725906742</updated>
+    </task>
+    <task id="LOCAL-00017" summary="created constructors in PlayList.java class">
+      <created>1663725965369</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1663725965369</updated>
+    </task>
+    <task id="LOCAL-00018" summary="created getters and setters in PlayList.java class">
+      <created>1663726090677</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663726090677</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added equals,hashcode and tostring methods in PlayList.java class">
+      <created>1663726344194</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1663726344194</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,7 +221,11 @@
     <MESSAGE value="added constructors in song class" />
     <MESSAGE value="added getters and setters in song class" />
     <MESSAGE value="added equals, hashcode and tostring methods in song class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added equals, hashcode and tostring methods in song class" />
+    <MESSAGE value="created fields in PlayList.java class" />
+    <MESSAGE value="created constructors in PlayList.java class" />
+    <MESSAGE value="created getters and setters in PlayList.java class" />
+    <MESSAGE value="added equals,hashcode and tostring methods in PlayList.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added equals,hashcode and tostring methods in PlayList.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
