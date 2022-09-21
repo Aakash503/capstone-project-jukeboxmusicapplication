@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="creating a DatabaseService.java class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jap/databaseService/DatabaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jap/databaseService/MusicPlayerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/MusicPlayerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/Playlistrepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" afterDir="false" />
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="created a DatabaseService.java class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/databaseService/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/Service/DatabaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/databaseService/MusicPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/Service/MusicPlayerService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +61,28 @@
       <option name="project" value="LOCAL" />
       <updated>1663678415401</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="creating a directory folder for sql query.">
+      <created>1663679277971</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663679277971</updated>
+    </task>
+    <task id="LOCAL-00003" summary="creating a sql query file.">
+      <created>1663679318832</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663679318832</updated>
+    </task>
+    <task id="LOCAL-00004" summary="creating a sql query file.">
+      <created>1663679369014</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663679369014</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -87,7 +104,11 @@
     <MESSAGE value="creating a PlayList.java class" />
     <MESSAGE value="ading fields to song class" />
     <MESSAGE value="creating a DatabaseService.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating a DatabaseService.java class" />
+    <MESSAGE value="creating a MusicPlayerRepositoryService.java class" />
+    <MESSAGE value="creating a directory folder for sql query." />
+    <MESSAGE value="creating a sql query file." />
+    <MESSAGE value="created a DatabaseService.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a DatabaseService.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
