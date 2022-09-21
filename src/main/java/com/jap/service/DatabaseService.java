@@ -8,4 +8,8 @@ public class DatabaseService {
     private final String PASSWORD = "Admin@123";
 
     private Connection connection;
+
+    public DatabaseService(Connection connection) {
+        this.connection = connection;
+    }
 }
