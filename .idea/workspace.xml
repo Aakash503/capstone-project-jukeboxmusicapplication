@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added getters and setters in song class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" afterDir="false" />
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added equals, hashcode and tostring methods in song class">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/PlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/model/PlayList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663725362406</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added equals, hashcode and tostring methods in song class">
+      <created>1663725569602</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1663725569602</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -184,7 +191,8 @@
     <MESSAGE value="added fields in song class" />
     <MESSAGE value="added constructors in song class" />
     <MESSAGE value="added getters and setters in song class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added getters and setters in song class" />
+    <MESSAGE value="added equals, hashcode and tostring methods in song class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added equals, hashcode and tostring methods in song class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
