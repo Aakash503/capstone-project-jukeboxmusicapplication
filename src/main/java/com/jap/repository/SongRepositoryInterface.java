@@ -12,7 +12,7 @@ public interface SongRepositoryInterface<Song> {
 
     Song findSongByArtistName(Connection connection, String artistName) throws SQLException;
 
-    Song findSongByGenre(Connection connection, String genre) throws SQLException;
+    Song findSongBySongId(Connection connection, int id) throws SQLException;
 
 
 }

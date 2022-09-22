@@ -11,21 +11,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int choice = -1;
+        int choice;
 
         do {
 
-            System.out.println("Welcome to the songplay System");
+            System.out.println("Welcome to the songplaylist");
 
             System.out.println("1. Add a new song");
             System.out.println("2. View all songs");
-//            System.out.println("3. View a salesperson by ID");
-//            System.out.println("4. Update a salesperson's commission rate by ID");
-//            System.out.println("5. Update a salesperson's city by ID");
-//            System.out.println("6. Delete a salesperson by ID");
-//            System.out.println("7. Exit");
-//            System.out.println("============================================");
-
+            System.out.println("3. find a song by artistName");
+            System.out.println("4. find a song by songId");
             Scanner scanner = new Scanner(System.in);
 
             System.out.print("Enter your choice: ");
@@ -68,107 +63,41 @@ public class Main {
                         songRepository.addSong(connection, song);
                         break;
                     case 2:
-                        System.out.println("View all salespersons");
+                        System.out.println("view all songs");
 
                         songRepository.displayAllSongs(connection).forEach(System.out::println);
 
                         break;
-//                    case 3:
-//                        System.out.println("View a salesperson by ID");
-//
-//                        System.out.println("Enter the salesperson's ID: ");
-//
-//                        int salesId = scanner.nextInt();
-//
-//                        Salesperson salesperson1 = salespersonRepository.getById(connection, salesId);
-//
-//                        if (salesperson1.getSalesId() == 0) {
-//                            System.err.println("No salesperson found with the given ID");
-//                        } else {
-//                            System.out.println(salesperson1);
-//                        }
-//
-//                        break;
-//                    case 4:
-//                        System.out.println("Update a salesperson's commission rate by ID");
-//
-//
-//                        System.out.println("Enter the salesperson's ID: ");
-//
-//                        salesId = scanner.nextInt();
-//
-//                        Salesperson salesperson2 = salespersonRepository.getById(connection, salesId);
-//
-//                        if (salesperson2.getSalesId() == 0) {
-//                            System.err.println("No salesperson found with the given ID");
-//                            break;
-//                        } else {
-//                            System.out.println("Enter the salesperson's new commission rate: ");
-//
-//                            commissionRate = scanner.nextDouble();
-//
-//                            boolean b = salespersonRepository.updateCommissionRate(connection, salesId, commissionRate);
-//
-//                            if (b) {
-//                                System.out.println("Salesperson's commission rate updated successfully");
-//                            } else {
-//                                System.err.println("No salesperson found with the given ID");
-//                            }
-//
-//                        }
-//
-//                        break;
-//                    case 5:
-//                        System.out.println("Update a salesperson's city by ID");
-//
-//                        System.out.println("Enter the salesperson's ID: ");
-//
-//                        salesId = scanner.nextInt();
-//
-//                        Salesperson salesperson3 = salespersonRepository.getById(connection, salesId);
-//
-//                        if (salesperson3.getSalesId() == 0) {
-//                            System.err.println("No salesperson found with the given ID");
-//                            break;
-//                        } else {
-//                            System.out.println("Enter the salesperson's new city: ");
-//
-//                            city = scanner.next();
-//
-//                            boolean result = salespersonRepository.updateCity(connection, salesId, city);
-//
-//                            if (result) {
-//                                System.out.println("Salesperson's city updated successfully");
-//                            } else {
-//                                System.err.println("No salesperson found with the given ID");
-//                            }
-//
-//                        }
-//
-//                        break;
-//                    case 6:
-//                        System.out.println("Delete a salesperson by ID");
-//
-//                        System.out.println("Enter the salesperson's ID: ");
-//
-//                        salesId = scanner.nextInt();
-//
-//                        Salesperson salesperson4 = salespersonRepository.getById(connection, salesId);
-//
-//                        if (salesperson4.getSalesId() == 0) {
-//                            System.err.println("No salesperson found with the given ID");
-//                        } else {
-//                            boolean b = salespersonRepository.deleteById(connection, salesId);
-//
-//                            if (b) {
-//                                System.out.println("Salesperson deleted successfully");
-//                            } else {
-//                                System.err.println("No salesperson found with the given ID");
-//                            }
-//                        }
-//
-//                        break;
                     case 3:
+                        System.out.println("find a song by Artist Name");
+
+                        System.out.println("Enter song Artist name: ");
+
+                        String artist = scanner.next();
+
+                        Song song1 = songRepository.findSongByArtistName(connection, artist);
+
+                        if (song1.getArtistName().equalsIgnoreCase(artist)) {
+                            System.out.println(song1);
+                        } else {
+                            System.err.println("No song found in the list");
+                        }
+
+                        break;
+
+                    case 4:
+
+                        System.out.println("Enter songId: ");
+                        int id = scanner.nextInt();
+                        Song song2 = songRepository.findSongBySongId(connection, id);
+                        if (song2.getSongId() == id) {
+                            System.out.println(song2);
+                        } else {
+                            System.err.println("No song found in the list");
+                        }
+
+                        break;
+                    case 5:
                         System.out.println("Exit");
                         break;
                     default:
@@ -178,10 +107,9 @@ public class Main {
             } catch (SQLException exception) {
                 System.err.println("Could not connect to the database!");
                 exception.printStackTrace();
-                ;
             }
 
-        } while (choice != 3);
+        } while (choice != 5);
     }
 
 }

@@ -11,13 +11,14 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
     @Override
     public boolean add(Connection connection, PlayList playlist) throws SQLException {
         // write the query for inserting a new playlist object into the `playlist` table
-        String insertQuery = "INSERT INTO `JUKEBOX`.`PLAYLIST`" + "(`NAME`,`NAME`)" + " VALUES (?,?);";
+        String insertQuery = "INSERT INTO `JUKEBOX`.`PLAYLIST`" + "(`id`,`NAME`,`NAME`)" + " VALUES (?,?,?);";
         //create a statement object
         int numberOfRowsAffected;
         //set values of the query parameter
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
-            preparedStatement.setString(1, playlist.getName());
-            preparedStatement.setString(2, playlist.getSong().getSongName());
+            preparedStatement.setInt(1, playlist.getId());
+            preparedStatement.setString(2, playlist.getName());
+            preparedStatement.setString(3, playlist.getSong().getSongName());
             //set values of the query parameter
             numberOfRowsAffected = preparedStatement.executeUpdate();
         }
@@ -36,13 +37,13 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
             //iterate over the result set and create a list of salesperson objects
             while (playlistResultSet.next()) {
                 //fetch the values of the current row from the result set
+                int playlistId = playlistResultSet.getInt("playlist_id");
                 String playlistName = playlistResultSet.getString("playlist_name");
                 String songName = playlistResultSet.getString("song_name");
-                int playlistId = playlistResultSet.getInt("playlist_id");
                 //create a playlist object using the values fetched from the result set
-                //    PlayList playlist = new PlayList(playlistId,p);
+                PlayList playlist = new PlayList(playlistId, playlistName, new Song());
                 //add the playlist object to the list
-                //   playlistList.add(playlist);
+                playlistList.add(playlist);
             }
         }
         return playlistList;
@@ -89,7 +90,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
                 String songName = playlistResultSet.getString("song_name");
                 int playlistId = playlistResultSet.getInt("playlist_id");
                 //create a playlist object using the values fetched from the result set
-                //    playlist = new PlayList(playlistId, songName, playlistId);
+                playlist = new PlayList();
             }
         }
         return false;
