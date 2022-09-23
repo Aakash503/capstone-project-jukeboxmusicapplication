@@ -1,6 +1,7 @@
 package com.jap;
 
 import com.jap.model.Song;
+import com.jap.repository.PlaylistRepository;
 import com.jap.repository.SongRepository;
 import com.jap.service.DatabaseService;
 
@@ -15,7 +16,7 @@ public class Main {
 
         do {
 
-            System.out.println("Welcome to the songplaylist");
+            System.out.println("Welcome to the song playlist");
 
             System.out.println("1. Add a new song");
             System.out.println("2. View all songs");
@@ -33,15 +34,14 @@ public class Main {
                 databaseService.connect();
 
                 SongRepository songRepository = new SongRepository();
+                PlaylistRepository playlistRepository = new PlaylistRepository();
 
                 Connection connection = databaseService.getConnection();
 
                 switch (choice) {
                     case 1:
                         System.out.println("Add a new song");
-                        System.out.println("Enter the songId ");
 
-                        int songId = scanner.nextInt();
                         System.out.println("Enter the song name: ");
 
                         String songName = scanner.next();
@@ -58,9 +58,9 @@ public class Main {
                         System.out.println("Enter the songPath: ");
                         String songPath = scanner.next();
 
-                        Song song = new Song(songId, songName, albumName, genre, artistName, songPath);
+                        Song Song = new Song(songName, albumName, genre, artistName, songPath);
 
-                        songRepository.addSong(connection, song);
+                        songRepository.addSong(connection, Song);
                         break;
                     case 2:
                         System.out.println("view all songs");
@@ -98,6 +98,12 @@ public class Main {
 
                         break;
                     case 5:
+                        System.out.println("Enter the playlist name you want to create");
+                        String playlistName = scanner.next();
+                        playlistRepository.createPlayList(connection, playlistName);
+                        break;
+
+                    case 6:
                         System.out.println("Exit");
                         break;
                     default:
@@ -109,7 +115,7 @@ public class Main {
                 exception.printStackTrace();
             }
 
-        } while (choice != 5);
+        } while (choice != 6);
     }
 
 }

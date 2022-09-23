@@ -7,17 +7,17 @@ import java.util.Objects;
 public class PlayList {
     private int id;
     private String name;
-    private Song song;
+    private Song Song;
     private List<Song> list;
 
     public PlayList() {
         list = new ArrayList<>();
     }
 
-    public PlayList(int id, String name, Song song) {
+    public PlayList(int id, String name, Song Song) {
         this.id = id;
         this.name = name;
-        this.song = song;
+        this.Song = Song;
 
     }
 
@@ -46,11 +46,11 @@ public class PlayList {
     }
 
     public Song getSong() {
-        return song;
+        return Song;
     }
 
-    public void setSong(Song song) {
-        this.song = song;
+    public void setSong(Song Song) {
+        this.Song = Song;
     }
 
     @Override
@@ -58,12 +58,12 @@ public class PlayList {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PlayList playList = (PlayList) o;
-        return id == playList.id && name.equals(playList.name) && song.equals(playList.song) && list.equals(playList.list);
+        return id == playList.id && name.equals(playList.name) && Song.equals(playList.Song) && list.equals(playList.list);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, song, list);
+        return Objects.hash(id, name, Song, list);
     }
 
     @Override
@@ -71,7 +71,7 @@ public class PlayList {
         return "PlayList{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", song=" + song +
+                ", song=" + Song +
                 ", list=" + list +
                 '}';
     }

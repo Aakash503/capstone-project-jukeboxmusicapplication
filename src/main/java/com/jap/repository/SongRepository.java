@@ -11,16 +11,15 @@ public class SongRepository implements SongRepositoryInterface<Song> {
 
 
     @Override
-    public boolean addSong(Connection connection, Song song) throws SQLException {
-        String insertQuery = "INSERT INTO `jukebox`.`songs` " + "(`songId`, `songName`, `albumName`,`genre`,`artistName`,`songPath`) " + "VALUES (?, ?, ?,?,?,?);";
+    public boolean addSong(Connection connection, Song Song) throws SQLException {
+        String insertQuery = "INSERT INTO `jukebox`.`songs` " + "( `songName`, `albumName`,`genre`,`artistName`,`songPath`) " + "VALUES ( ?, ?,?,?,?);";
         int numberOfRowsAffected;
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
-            preparedStatement.setInt(1, song.getSongId());
-            preparedStatement.setString(2, song.getSongName());
-            preparedStatement.setString(3, song.getAlbumName());
-            preparedStatement.setString(4, song.getGenre());
-            preparedStatement.setString(5, song.getArtistName());
-            preparedStatement.setString(6, song.getSongPath());
+            preparedStatement.setString(1, Song.getSongName());
+            preparedStatement.setString(2, Song.getAlbumName());
+            preparedStatement.setString(3, Song.getGenre());
+            preparedStatement.setString(4, Song.getArtistName());
+            preparedStatement.setString(5, Song.getSongPath());
 
             numberOfRowsAffected = preparedStatement.executeUpdate();
 
@@ -45,8 +44,8 @@ public class SongRepository implements SongRepositoryInterface<Song> {
                 String artistName = songsResultSet.getString("artistName");
                 String songPath = songsResultSet.getString("songPath");
 
-                Song song = new Song(songId, songName, albumName, genre, artistName, songPath);
-                songList.add(song);
+                Song Song = new Song(songName, albumName, genre, artistName, songPath);
+                songList.add(Song);
             }
         }
 
@@ -56,7 +55,7 @@ public class SongRepository implements SongRepositoryInterface<Song> {
     @Override
     public Song findSongByArtistName(Connection connection, String artistName) throws SQLException {
         String searchQuery = "SELECT * FROM `jukebox`.`songs` WHERE(`artistName` = ?);";
-        Song song = new Song();
+        Song Song = new Song();
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(searchQuery)) {
 
@@ -74,17 +73,17 @@ public class SongRepository implements SongRepositoryInterface<Song> {
                 String songPath = songsResultSet.getString("songPath");
 
                 // create a song object using the values fetched from the result set
-                song = new Song(songId, songName, albumName, genre, artist, songPath);
+                Song = new Song(songName, albumName, genre, artist, songPath);
             }
         }
-        return song;
+        return Song;
 
     }
 
     @Override
     public Song findSongBySongId(Connection connection, int id) throws SQLException {
         String searchQuery = "SELECT * FROM `jukebox`.`songs` WHERE(`genre` = ?);";
-        Song song = new Song();
+        Song Song = new Song();
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(searchQuery)) {
 
@@ -101,12 +100,12 @@ public class SongRepository implements SongRepositoryInterface<Song> {
                 String artist = songsResultSet.getString("artistName");
                 String songPath = songsResultSet.getString("songPath");
 
-                song = new Song(songId, songName, albumName, genre, artist, songPath);
+                Song = new Song(songName, albumName, genre, artist, songPath);
 
             }
 
         }
-        return song;
+        return Song;
     }
 
 }
