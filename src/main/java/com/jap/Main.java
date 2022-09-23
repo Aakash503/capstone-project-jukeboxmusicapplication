@@ -22,6 +22,7 @@ public class Main {
             System.out.println("2. View all songs");
             System.out.println("3. find a song by artistName");
             System.out.println("4. find a song by songId");
+            System.out.println("5. Create a new playlist");
             Scanner scanner = new Scanner(System.in);
 
             System.out.print("Enter your choice: ");
