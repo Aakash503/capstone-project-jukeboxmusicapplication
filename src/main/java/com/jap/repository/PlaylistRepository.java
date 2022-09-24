@@ -33,14 +33,9 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
      */
     @Override
     public boolean addSongInPlayList(Connection connection, String playListName, int songId) throws SQLException {
-        //
-//        String insertQuery = "INSERT INTO`" +playListName+"` (`songId`,`songName`,`albumName`,`genre`,`artistName`,`songPath`)
-//        select *
-//        from `songs` where `songId`=?";
-        String insertQuery = "INSERT INTO `jukebox`.`" + playListName + "` (songId,songName,albumName,genre,artistName,songPath)" +
-                "SELECT songId,songName,albumName,genre,artistName,songPath" +
-                "FROM songs (where songId=?);";
 
+        String insertQuery = "INSERT INTO`" + playListName + "` (`songId`,`songName`,`albumName`,`genre`,`artistName`,`songPath`)"
+                + "select * From `jukebox`.`songs`where`songId`=?";
 
         int numberOfRowsAffected;
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
