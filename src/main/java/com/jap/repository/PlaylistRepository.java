@@ -64,6 +64,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
         return numberOfRowsAffected > 0;
     }
 
+
     public Song findSongInPlaylist(Connection connection, String playListName, int songID) throws SQLException {
         String searchQuery = "SELECT * FROM `jukebox`.`" + playListName + "` WHERE(`songId` = ?);";
         Song song = new Song();
