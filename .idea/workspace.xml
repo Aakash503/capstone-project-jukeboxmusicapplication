@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a play method in MusicPlayerService.java class">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added instructions in main method for calling create playlist method">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/CookiesanSombreNaruto.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/YasuharuTakanashiSceneofaDisaster.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/PlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/model/PlayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepositoryInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepositoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/service/MusicPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/service/MusicPlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/song_table_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/song_table_queries.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +38,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2F25HhTJg6AvzoxJLiCwQ8xxQvl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -40,18 +49,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "last_opened_file_path": "C:/Users/acer/IdeaProjects/capstone-project-jukebox",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/acer/IdeaProjects/capstone-project-jukebox/src/main/resources/songs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\sql" />
       <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
@@ -296,7 +308,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663857901665</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="calling methods from PlaylistRepository class in the main method">
+      <created>1663896002347</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1663896002347</updated>
+    </task>
+    <task id="LOCAL-00032" summary="added instructions in main method for calling create playlist method">
+      <created>1663896486147</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1663896486147</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,8 +337,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created a MusicPlayerService.java class" />
-    <MESSAGE value="created a Song.java class" />
     <MESSAGE value="created a MusicPlayerRepository.java class in repository package." />
     <MESSAGE value="created a PlaylistRepository.java class in repository package." />
     <MESSAGE value="created a SongRepository.java class in repository package." />
@@ -336,7 +360,9 @@
     <MESSAGE value="creating a DatabaseService.java class object in main class" />
     <MESSAGE value="created findSongByArtistName and findSongByGenre methods in SongRepositoryInterface" />
     <MESSAGE value="added a play method in MusicPlayerService.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a play method in MusicPlayerService.java class" />
+    <MESSAGE value="calling methods from PlaylistRepository class in the main method" />
+    <MESSAGE value="added instructions in main method for calling create playlist method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added instructions in main method for calling create playlist method" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

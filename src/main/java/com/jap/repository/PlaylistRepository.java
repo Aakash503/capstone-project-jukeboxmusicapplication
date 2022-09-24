@@ -1,110 +1,10 @@
 package com.jap.repository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import com.jap.model.Song;
 
-//public class PlaylistRepository implements PlaylistRepositoryInterface {
-//    @Override
-//    public boolean add(Connection connection, PlayList playlist) throws SQLException {
-//        // write the query for inserting a new playlist object into the `playlist` table
-//        String insertQuery = "INSERT INTO `JUKEBOX`.`PLAYLIST`" + "(`id`,`NAME`,`NAME`)" + " VALUES (?,?,?);";
-//        //create a statement object
-//        int numberOfRowsAffected;
-//        //set values of the query parameter
-//        try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
-//            preparedStatement.setInt(1, playlist.getId());
-//            preparedStatement.setString(2, playlist.getName());
-//            preparedStatement.setString(3, playlist.getSong().getSongName());
-//            //set values of the query parameter
-//            numberOfRowsAffected = preparedStatement.executeUpdate();
-//        }
-//        return numberOfRowsAffected > 0;
-//    }
-//
-//    @Override
-//    public List<PlayList> getAll(Connection connection) throws SQLException {
-//        //write the query for selecting all the playlist objects from the `PLAYLIST` table
-//        String readQuery = "SELECT * FROM `jukebox`.`playlist`;";
-//        List<PlayList> playlistList = new ArrayList<>();
-//        //create a statement object
-//        try (Statement statement = connection.createStatement()) {
-//            //execute the query
-//            ResultSet playlistResultSet = statement.executeQuery(readQuery);
-//            //iterate over the result set and create a list of salesperson objects
-//            while (playlistResultSet.next()) {
-//                //fetch the values of the current row from the result set
-//                int playlistId = playlistResultSet.getInt("playlist_id");
-//                String playlistName = playlistResultSet.getString("playlist_name");
-//                String songName = playlistResultSet.getString("song_name");
-//                //create a playlist object using the values fetched from the result set
-//                PlayList playlist = new PlayList(playlistId, playlistName, new Song());
-//                //add the playlist object to the list
-//                playlistList.add(playlist);
-//            }
-//        }
-//        return playlistList;
-//    }
-//
-//    @Override
-//    public PlayList getByPlaylistName(Connection connection, String name) throws SQLException {
-//        //write the query for selecting a playlist object from the `playlist` table
-//        String searchQuery = "SELECT * FROM `jukebox`.`playlist` WHERE(`playlist_name` = ?);";
-//        PlayList playlist = new PlayList();
-//        //create a statement object
-//        try (PreparedStatement preparedStatement = connection.prepareStatement(searchQuery)) {
-//            // set the value of query parameters
-//            preparedStatement.setString(1, name);
-//            //execute the query
-//            ResultSet playlistResultSet = preparedStatement.executeQuery();
-//            //check if the result set is empty
-//            while (playlistResultSet.next()) {
-//                //fetch the values of the current row from the result set
-//                String playlistName = playlistResultSet.getString("name");
-//                String songName = playlistResultSet.getString("song_name");
-//                int playlistId = playlistResultSet.getInt("id");
-//                //create a playlist object using the values fetched from the result set
-//                playlist = new PlayList(playlistId, songName, new Song());
-//            }
-//        }
-//        return playlist;
-//    }
-//
-//    @Override
-//    public boolean updatePlaylistId(Connection connection, int id) throws SQLException {
-//        //write the query for selecting a playlist object from the `playlist` table
-//        String searchQuery = "SELECT * FROM `jukebox`.`playlist` WHERE(`playlist_id` = ?);";
-//        PlayList playlist = new PlayList();
-//        // create a statement object
-//        try (PreparedStatement preparedStatement = connection.prepareStatement(searchQuery)) {
-//            //set the values of the query parameters
-//            preparedStatement.setInt(1, id);
-//            //execute the query
-//            ResultSet playlistResultSet = preparedStatement.executeQuery();
-//            //check if the result set is empty
-//            while (playlistResultSet.next()) {
-//                String playlistName = playlistResultSet.getString("playlist_name");
-//                String songName = playlistResultSet.getString("song_name");
-//                int playlistId = playlistResultSet.getInt("playlist_id");
-//                //create a playlist object using the values fetched from the result set
-//                playlist = new PlayList();
-//            }
-//        }
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean deleteById(Connection connection, int id) throws SQLException {
-//        String deleteQuery = "DELETE FROM `jukebox`.`playlist` WHERE (`playlist_id` = ?);";
-//        int numberOfRowsAffected;
-//        try (PreparedStatement preparedStatement = connection.prepareStatement(deleteQuery)) {
-//            preparedStatement.setInt(1, id);
-//            numberOfRowsAffected = preparedStatement.executeUpdate();
-//        }
-//        return numberOfRowsAffected > 0;
-//    }
-//}
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class PlaylistRepository implements PlaylistRepositoryInterface {
@@ -117,7 +17,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
      */
     @Override
     public void createPlayList(Connection connection, String playListName) throws SQLException {
-        String playListQuery = "CREATE TABLE `" + playListName + "` (`song_id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,`song_name` VARCHAR(50),`artist_name` VARCHAR(50),`album_name` VARCHAR(50),`song_genre` VARCHAR(50),`song_duration` varchar(20));";
+        String playListQuery = "CREATE TABLE `" + playListName + "` (`songId` INT NOT NULL PRIMARY KEY ,`songName` VARCHAR(100),`albumName` VARCHAR(100),`genre` VARCHAR(100),`artistName` VARCHAR(100),`songPath`VARCHAR(100));";
         try (Statement statement = connection.createStatement()) {
             statement.execute(playListQuery);
         }
@@ -133,11 +33,15 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
      */
     @Override
     public boolean addSongInPlayList(Connection connection, String playListName, int songId) throws SQLException {
-        String addSongQuery = "INSERT INTO `" + playListName + "` (`song_id`,`song_name`,`artist_name`,`album_name`,`song_genre`,`song_duration`)SELECT * FROM `songslist` where `song_id`=? ";
-        int numberOfRowsAffected;
-        try (PreparedStatement preparedStatement = connection.prepareStatement(addSongQuery)) {
-            preparedStatement.setInt(1, songId);
+        //
+//        String insertQuery = "INSERT INTO`" +playListName+"` (`songId`,`songName`,`albumName`,`genre`,`artistName`,`songPath`)
+//        select *
+//        from `songs` where `songId`=?";
+        String insertQuery = "INSERT INTO`";
 
+        int numberOfRowsAffected;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+            preparedStatement.setInt(1, songId);
             numberOfRowsAffected = preparedStatement.executeUpdate();
         }
         return numberOfRowsAffected > 0;
@@ -153,7 +57,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
      */
     @Override
     public boolean removeSongFromPlayList(Connection connection, String playListName, int songId) throws SQLException {
-        String removeQuery = "DELETE FROM `jukebox`.`" + playListName + "` WHERE (`song_id` = ?);";
+        String removeQuery = "DELETE FROM `jukebox`.`" + playListName + "` WHERE (`songId` = ?);";
         int numberOfRowsAffected;
         try (PreparedStatement preparedStatement = connection.prepareStatement(removeQuery)) {
             preparedStatement.setInt(1, songId);
@@ -161,6 +65,61 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
         }
         return numberOfRowsAffected > 0;
     }
+
+    public Song findSongInPlaylist(Connection connection, String playListName, int songID) throws SQLException {
+        String searchQuery = "SELECT * FROM `jukebox`.`" + playListName + "` WHERE(`songId` = ?);";
+        Song song = new Song();
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(searchQuery)) {
+
+            preparedStatement.setInt(1, songID);
+            ResultSet songsResultSet = preparedStatement.executeQuery();
+
+            // check if the result set is empty
+            while (songsResultSet.next()) {
+                //  fetch the values of the current row from the result set
+                int songId = songsResultSet.getInt("songId");
+                String songName = songsResultSet.getString("songName");
+                String albumName = songsResultSet.getString("albumName");
+                String genre = songsResultSet.getString("genre");
+                String artist = songsResultSet.getString("artistName");
+                String songPath = songsResultSet.getString("songPath");
+
+                song = new Song(songId, songName, albumName, genre, artist, songPath);
+
+            }
+
+        }
+        return song;
+    }
+
+    public List<Song> displayAllSongsInPlaylist(Connection connection, String playListName) throws SQLException {
+
+        String readQuery = "SELECT * FROM `jukebox`.`" + playListName + "`;";
+        List<Song> songList = new ArrayList<>();
+
+        try (Statement statement = connection.createStatement()) {
+
+            ResultSet songsResultSet = statement.executeQuery(readQuery);
+            while (songsResultSet.next()) {
+
+                int songId = songsResultSet.getInt("songId");
+                String songName = songsResultSet.getString("songName");
+                String albumName = songsResultSet.getString("albumName");
+                String genre = songsResultSet.getString("genre");
+                String artistName = songsResultSet.getString("artistName");
+                String songPath = songsResultSet.getString("songPath");
+
+                Song song = new Song(songId, songName, albumName, genre, artistName, songPath);
+                songList.add(song);
+            }
+        }
+
+        return songList;
+
+
+    }
+
 }
 
 

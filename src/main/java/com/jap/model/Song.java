@@ -19,24 +19,26 @@ public class Song {
         this.genre = genre;
         this.artistName = artistName;
         this.songPath = songPath;
+    }
 
+    public Song(int id, String songName, String albumName, String genre, String artistName, String songPath) {
+        this.id = id;
+        this.songName = songName;
+        this.albumName = albumName;
+        this.genre = genre;
+        this.artistName = artistName;
+        this.songPath = songPath;
     }
 
     public int getSongId() {
         return id;
     }
 
-    public void setSongId(int songId) {
-        this.id = songId;
-    }
 
     public String getSongName() {
         return songName;
     }
 
-    public void setSongName(String songName) {
-        this.songName = songName;
-    }
 
     public String getAlbumName() {
         return albumName;
@@ -50,9 +52,6 @@ public class Song {
         return genre;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
-    }
 
     public String getSongPath() {
         return songPath;
@@ -66,9 +65,6 @@ public class Song {
         return artistName;
     }
 
-    public void setArtistName(String artistName) {
-        this.artistName = artistName;
-    }
 
     public int getId() {
         return id;

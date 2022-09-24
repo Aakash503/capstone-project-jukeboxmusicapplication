@@ -20,6 +20,7 @@ public class MusicPlayerService {
             clip.loop(Clip.LOOP_CONTINUOUSLY);
             // 7. start the sound file
             clip.start();
+            clip.close();
             // 8. pause the current thread for the time the song is being played
             long songDurationInMilliseconds = clip.getMicrosecondLength() / 1000L;
             Thread.sleep(songDurationInMilliseconds);

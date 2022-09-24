@@ -11,15 +11,15 @@ public class SongRepository implements SongRepositoryInterface<Song> {
 
 
     @Override
-    public boolean addSong(Connection connection, Song Song) throws SQLException {
+    public boolean addSong(Connection connection, Song song) throws SQLException {
         String insertQuery = "INSERT INTO `jukebox`.`songs` " + "( `songName`, `albumName`,`genre`,`artistName`,`songPath`) " + "VALUES ( ?, ?,?,?,?);";
         int numberOfRowsAffected;
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
-            preparedStatement.setString(1, Song.getSongName());
-            preparedStatement.setString(2, Song.getAlbumName());
-            preparedStatement.setString(3, Song.getGenre());
-            preparedStatement.setString(4, Song.getArtistName());
-            preparedStatement.setString(5, Song.getSongPath());
+            preparedStatement.setString(1, song.getSongName());
+            preparedStatement.setString(2, song.getAlbumName());
+            preparedStatement.setString(3, song.getGenre());
+            preparedStatement.setString(4, song.getArtistName());
+            preparedStatement.setString(5, song.getSongPath());
 
             numberOfRowsAffected = preparedStatement.executeUpdate();
 
@@ -44,8 +44,8 @@ public class SongRepository implements SongRepositoryInterface<Song> {
                 String artistName = songsResultSet.getString("artistName");
                 String songPath = songsResultSet.getString("songPath");
 
-                Song Song = new Song(songName, albumName, genre, artistName, songPath);
-                songList.add(Song);
+                Song song = new Song(songId, songName, albumName, genre, artistName, songPath);
+                songList.add(song);
             }
         }
 
@@ -55,7 +55,7 @@ public class SongRepository implements SongRepositoryInterface<Song> {
     @Override
     public Song findSongByArtistName(Connection connection, String artistName) throws SQLException {
         String searchQuery = "SELECT * FROM `jukebox`.`songs` WHERE(`artistName` = ?);";
-        Song Song = new Song();
+        Song song = new Song();
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(searchQuery)) {
 
@@ -65,25 +65,25 @@ public class SongRepository implements SongRepositoryInterface<Song> {
             // check if the result set is empty
             while (songsResultSet.next()) {
                 //  fetch the values of the current row from the result set
-                int songId = songsResultSet.getInt("songId");
-                String songName = songsResultSet.getString("songName");
-                String albumName = songsResultSet.getString("albumName");
+                int songId = songsResultSet.getInt("song_Id");
+                String songName = songsResultSet.getString("song_Name");
+                String albumName = songsResultSet.getString("album_Name");
                 String genre = songsResultSet.getString("genre");
-                String artist = songsResultSet.getString("artistName");
-                String songPath = songsResultSet.getString("songPath");
+                String artist = songsResultSet.getString("artist_Name");
+                String songPath = songsResultSet.getString("song_Path");
 
                 // create a song object using the values fetched from the result set
-                Song = new Song(songName, albumName, genre, artist, songPath);
+                song = new Song(songId, songName, albumName, genre, artist, songPath);
             }
         }
-        return Song;
+        return song;
 
     }
 
     @Override
     public Song findSongBySongId(Connection connection, int id) throws SQLException {
-        String searchQuery = "SELECT * FROM `jukebox`.`songs` WHERE(`genre` = ?);";
-        Song Song = new Song();
+        String searchQuery = "SELECT * FROM `jukebox`.`songs` WHERE(`songId` = ?);";
+        Song song = new Song();
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(searchQuery)) {
 
@@ -93,19 +93,20 @@ public class SongRepository implements SongRepositoryInterface<Song> {
             // check if the result set is empty
             while (songsResultSet.next()) {
                 //  fetch the values of the current row from the result set
-                int songId = songsResultSet.getInt("songId");
-                String songName = songsResultSet.getString("songName");
-                String albumName = songsResultSet.getString("albumName");
-                String genre = songsResultSet.getString("genre");
-                String artist = songsResultSet.getString("artistName");
-                String songPath = songsResultSet.getString("songPath");
+                int songId = songsResultSet.getInt("song_Id");
+                String songName = songsResultSet.getString("song_Name");
+                String albumName = songsResultSet.getString("album_Name");
+                String genre = songsResultSet.getString("_genre");
+                String artist = songsResultSet.getString("artist_Name");
+                String songPath = songsResultSet.getString("song_Path");
 
-                Song = new Song(songName, albumName, genre, artist, songPath);
+                song = new Song(songId, songName, albumName, genre, artist, songPath);
 
             }
 
         }
-        return Song;
+        return song;
     }
+
 
 }
