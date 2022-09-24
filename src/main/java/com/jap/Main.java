@@ -22,12 +22,12 @@ public class Main {
             System.out.println("1. Add a new song");
             System.out.println("2. View all songs in songList");
             System.out.println("3. View all songs in your playList");
-            System.out.println("4. find a song by artistName");
-            System.out.println("5. find a song by songId");
+            System.out.println("4. Find a song by artistName");
+            System.out.println("5. Find a song by songId");
             System.out.println("6. Create a new playlist");
             System.out.println("7. Add a song in your playlist");
-            System.out.println("8. to play a song");
-            System.out.println("9. to delete a song from playlist");
+            System.out.println("8. Play a song");
+            System.out.println("9. Delete a song from playlist");
             Scanner scanner = new Scanner(System.in);
 
             System.out.print("Enter your choice: ");
@@ -79,7 +79,6 @@ public class Main {
                         System.out.println("find a song by Artist Name");
                         System.out.println("Enter song Artist name: ");
                         String artist = scanner.next();
-
                         Song song1 = songRepository.findSongByArtistName(connection, artist);
 
                         if (song1.getArtistName().equalsIgnoreCase(artist)) {

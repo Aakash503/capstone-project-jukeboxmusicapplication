@@ -20,7 +20,6 @@ public class Song {
         this.artistName = artistName;
         this.songPath = songPath;
     }
-
     public Song(int id, String songName, String albumName, String genre, String artistName, String songPath) {
         this.id = id;
         this.songName = songName;
@@ -66,9 +65,6 @@ public class Song {
     }
 
 
-    public int getId() {
-        return id;
-    }
 
     public void setId(int id) {
         this.id = id;

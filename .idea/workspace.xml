@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added instructions in main method for calling create playlist method">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/CookiesanSombreNaruto.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/YasuharuTakanashiSceneofaDisaster.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a displayallsongsinplaylist method in PlaylistRepository.java class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepositoryInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepositoryInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/service/MusicPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/service/MusicPlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/song_table_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/song_table_queries.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663896486147</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="added a displayallsongsinplaylist method in PlaylistRepository.java class">
+      <created>1664014696769</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1664014696769</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,7 +334,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created a MusicPlayerRepository.java class in repository package." />
     <MESSAGE value="created a PlaylistRepository.java class in repository package." />
     <MESSAGE value="created a SongRepository.java class in repository package." />
     <MESSAGE value="added fields in song class" />
@@ -362,7 +358,8 @@
     <MESSAGE value="added a play method in MusicPlayerService.java class" />
     <MESSAGE value="calling methods from PlaylistRepository class in the main method" />
     <MESSAGE value="added instructions in main method for calling create playlist method" />
-    <option name="LAST_COMMIT_MESSAGE" value="added instructions in main method for calling create playlist method" />
+    <MESSAGE value="added a displayallsongsinplaylist method in PlaylistRepository.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a displayallsongsinplaylist method in PlaylistRepository.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
