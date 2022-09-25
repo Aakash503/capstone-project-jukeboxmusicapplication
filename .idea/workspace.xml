@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added getAllSongs method for testing displayAllSongsInPlayList method in PlaylistRepositoryTest.java class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository1.java" afterDir="false" />
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="created a PlaylistRepository1 interface">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -137,20 +139,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663677254737</updated>
-    </task>
-    <task id="LOCAL-00002" summary="creating a directory folder for sql query.">
-      <created>1663679277971</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1663679277971</updated>
-    </task>
-    <task id="LOCAL-00003" summary="creating a sql query file.">
-      <created>1663679318832</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1663679318832</updated>
     </task>
     <task id="LOCAL-00004" summary="creating a sql query file.">
       <created>1663679369014</created>
@@ -481,7 +469,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664117919954</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="created a PlaylistRepository1.java class">
+      <created>1664123913478</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1664123913478</updated>
+    </task>
+    <task id="LOCAL-00052" summary="created a PlaylistRepository1 interface">
+      <created>1664124202244</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1664124202244</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -496,8 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created a SongRepositoryInterface" />
-    <MESSAGE value="created a addSong method in SongRepositoryInterface" />
     <MESSAGE value="creating a DatabaseService.java class object in main class" />
     <MESSAGE value="created findSongByArtistName and findSongByGenre methods in SongRepositoryInterface" />
     <MESSAGE value="added a play method in MusicPlayerService.java class" />
@@ -521,7 +521,9 @@
     <MESSAGE value="added a getSongById method for testing addSongInPlayList method in PlaylistRepositoryTest.java class" />
     <MESSAGE value="added deleteSongFromPlaylist method for testing addSongInPlayList method in PlaylistRepositoryTest.java class" />
     <MESSAGE value="added getAllSongs method for testing displayAllSongsInPlayList method in PlaylistRepositoryTest.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added getAllSongs method for testing displayAllSongsInPlayList method in PlaylistRepositoryTest.java class" />
+    <MESSAGE value="created a PlaylistRepository1.java class" />
+    <MESSAGE value="created a PlaylistRepository1 interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a PlaylistRepository1 interface" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

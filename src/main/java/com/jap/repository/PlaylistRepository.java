@@ -116,11 +116,15 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
                 songList.add(song);
             }
         }
-
         return songList;
-
-
     }
+
+    PlaylistRepository1 playlistRepository1 = new PlaylistRepository1() {
+        @Override
+        public void createListOfPlaylist(Connection connection, String listName) {
+
+        }
+    };
 
 }
 
