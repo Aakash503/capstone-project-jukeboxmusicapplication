@@ -28,6 +28,7 @@ public class Main {
             System.out.println("7. Add a song in your playlist");
             System.out.println("8. Play a song");
             System.out.println("9. Delete a song from playlist");
+            System.out.println("10. Delete Song from songs");
             Scanner scanner = new Scanner(System.in);
 
             System.out.print("Enter your choice: ");
@@ -132,7 +133,14 @@ public class Main {
                         boolean result = playlistRepository.removeSongFromPlayList(connection, name, snid);
                         System.out.println(result);
                         break;
+
                     case 10:
+                        System.out.println("enter the songId of Song you want to delete");
+                        int sid1 = scanner.nextInt();
+                        boolean b1 = songRepository.removeSongFromSongs(connection, sid1);
+                        System.out.println(b1);
+                        break;
+                    case 11:
                         System.out.println("Exit");
                         break;
                     default:
@@ -145,7 +153,7 @@ public class Main {
                 exception.printStackTrace();
             }
 
-        } while (choice != 10);
+        } while (choice != 11);
     }
 
 }

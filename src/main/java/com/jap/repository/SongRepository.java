@@ -37,14 +37,14 @@ public class SongRepository implements SongRepositoryInterface<Song> {
             ResultSet songsResultSet = statement.executeQuery(readQuery);
             while (songsResultSet.next()) {
 
-                int songId = songsResultSet.getInt("songId");
-                String songName = songsResultSet.getString("songName");
-                String albumName = songsResultSet.getString("albumName");
-                String genre = songsResultSet.getString("genre");
-                String artistName = songsResultSet.getString("artistName");
-                String songPath = songsResultSet.getString("songPath");
+                int songId1 = songsResultSet.getInt("songId");
+                String songName1 = songsResultSet.getString("songName");
+                String albumName1 = songsResultSet.getString("albumName");
+                String genre1 = songsResultSet.getString("genre");
+                String artistName1 = songsResultSet.getString("artistName");
+                String songPath1 = songsResultSet.getString("songPath");
 
-                Song song = new Song(songId, songName, albumName, genre, artistName, songPath);
+                Song song = new Song(songId1, songName1, albumName1, genre1, artistName1, songPath1);
                 songList.add(song);
             }
         }
@@ -68,7 +68,7 @@ public class SongRepository implements SongRepositoryInterface<Song> {
                 int songId = songsResultSet.getInt("song_Id");
                 String songName = songsResultSet.getString("song_Name");
                 String albumName = songsResultSet.getString("album_Name");
-                String genre = songsResultSet.getString("genre");
+                String genre = songsResultSet.getString("genre1");
                 String artist = songsResultSet.getString("artist_Name");
                 String songPath = songsResultSet.getString("song_Path");
 
@@ -93,12 +93,12 @@ public class SongRepository implements SongRepositoryInterface<Song> {
             // check if the result set is empty
             while (songsResultSet.next()) {
                 //  fetch the values of the current row from the result set
-                int songId = songsResultSet.getInt("song_Id");
-                String songName = songsResultSet.getString("song_Name");
-                String albumName = songsResultSet.getString("album_Name");
-                String genre = songsResultSet.getString("_genre");
-                String artist = songsResultSet.getString("artist_Name");
-                String songPath = songsResultSet.getString("song_Path");
+                int songId = songsResultSet.getInt("songId");
+                String songName = songsResultSet.getString("songName");
+                String albumName = songsResultSet.getString("albumName");
+                String genre = songsResultSet.getString("genre");
+                String artist = songsResultSet.getString("artistName");
+                String songPath = songsResultSet.getString("songPath");
 
                 song = new Song(songId, songName, albumName, genre, artist, songPath);
 
@@ -106,6 +106,16 @@ public class SongRepository implements SongRepositoryInterface<Song> {
 
         }
         return song;
+    }
+
+    public boolean removeSongFromSongs(Connection connection, int songId) throws SQLException {
+        String removeQuery = "DELETE FROM `jukebox`.`songs` WHERE (`songId` = ?);";
+        int numberOfRowsAffected;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(removeQuery)) {
+            preparedStatement.setInt(1, songId);
+            numberOfRowsAffected = preparedStatement.executeUpdate();
+        }
+        return numberOfRowsAffected > 0;
     }
 
 

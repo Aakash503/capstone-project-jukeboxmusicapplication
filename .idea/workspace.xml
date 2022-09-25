@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a statement to print message about inturrupted exeption to clear the threads">
-      <change afterPath="$PROJECT_DIR$/.idea/CoverUsage.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/0/30f9777ea696a18aa49d3e9967e93a4276065227" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/a/8a6dae537be9f47878c6964c6ee40cab0ca75e28" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="created a SongRepositoryTest.java class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepositoryInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/service/MusicPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/service/MusicPlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +63,7 @@
       <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="Diffblue Cover.Write tests for class PlaylistRepository">
+  <component name="RunManager" selected="JUnit.SongRepositoryTest.getSongByIdFailure">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jap.Main" />
       <module name="capstone-project-jukebox" />
@@ -84,6 +77,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SongRepositoryTest.getSongByIdFailure" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-project-jukebox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
+      <option name="METHOD_NAME" value="getSongByIdFailure" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongRepositoryTest.getSongByIdSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-project-jukebox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
+      <option name="METHOD_NAME" value="getSongByIdSuccess" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Write tests for class PlaylistRepository" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration">
       <module name="capstone-project-jukebox" />
       <settings run-config-name="Write tests for class PlaylistRepository" include-system-env-vars="true">
@@ -93,10 +106,31 @@
       </settings>
       <method v="2" />
     </configuration>
+    <configuration name="Write tests for method SongRepository.findSongBySongId" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="capstone-project-jukebox" />
+      <settings run-config-name="Write tests for method SongRepository.findSongBySongId" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="com.jap.repository.SongRepository.findSongBySongId:(Ljava/sql/Connection;I)Lcom/jap/model/Song;" />
+      </settings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Write tests for method SongRepository.removeSongFromPlayList" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
+      <module name="capstone-project-jukebox" />
+      <settings run-config-name="Write tests for method SongRepository.removeSongFromPlayList" include-system-env-vars="true">
+        <jvm-args />
+        <selection-scope>method</selection-scope>
+        <selected-element key="com.jap.repository.SongRepository.removeSongFromPlayList:(Ljava/sql/Connection;I)Z" />
+      </settings>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SongRepositoryTest.getSongByIdFailure" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Diffblue Cover.Write tests for class PlaylistRepository" />
+        <item itemvalue="JUnit.SongRepositoryTest.getSongByIdSuccess" />
+        <item itemvalue="Diffblue Cover.Write tests for method SongRepository.findSongBySongId" />
+        <item itemvalue="Diffblue Cover.Write tests for method SongRepository.removeSongFromPlayList" />
       </list>
     </recent_temporary>
   </component>
@@ -368,7 +402,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664032332799</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="created a PlaylistRepositoryTest.java class">
+      <created>1664095898721</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1664095898721</updated>
+    </task>
+    <task id="LOCAL-00039" summary="created a SongRepositoryTest.java class">
+      <created>1664095982072</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1664095982072</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -383,8 +431,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added getters and setters in song class" />
-    <MESSAGE value="added equals, hashcode and tostring methods in song class" />
     <MESSAGE value="created fields in PlayList.java class" />
     <MESSAGE value="created constructors in PlayList.java class" />
     <MESSAGE value="created getters and setters in PlayList.java class" />
@@ -408,7 +454,9 @@
     <MESSAGE value="corrected addsonginplaylist method playlistrepository class" />
     <MESSAGE value="added removesongfromplaylist method in playlistrepository class" />
     <MESSAGE value="added a statement to print message about inturrupted exeption to clear the threads" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a statement to print message about inturrupted exeption to clear the threads" />
+    <MESSAGE value="created a PlaylistRepositoryTest.java class" />
+    <MESSAGE value="created a SongRepositoryTest.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a SongRepositoryTest.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
