@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 
 class SongRepositoryTest {
@@ -65,7 +66,13 @@ class SongRepositoryTest {
     }
 
     @Test
-    void viewAllSongs() throws SQLException {
-        System.out.println("a");
+    void getAllSongs() throws SQLException {
+        databaseService.connect();
+        Connection connection = databaseService.getConnection();
+        List<Song> output = songRepository.displayAllSongs(connection);
+        List<Song> expectedOutput = songRepository.displayAllSongs(connection);
+        Assertions.assertEquals(expectedOutput, output);
     }
+
 }
+
