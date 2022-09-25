@@ -39,11 +39,16 @@ import java.sql.SQLException;
         void getSongById() throws SQLException {
             databaseService.connect();
             Connection connection = databaseService.getConnection();
-//            Song output = playlistRepository.findSongInPlaylist(connection,);
-//            Song expectedOutput = playlistRepository.findSongInPlaylist(connection,);
             Assertions.assertTrue(playlistRepository.addSongInPlayList(connection,
-                    "myfavorate", 8), "given song is added in the playlist");
+                    "myfavorate", 7), "given song is added in the playlist");
         }
 
+        @Test
+        void deleteSongFromPlaylist() throws SQLException {
+            databaseService.connect();
+            Connection connection = databaseService.getConnection();
+            boolean Output = playlistRepository.removeSongFromPlayList(connection, "myfavorate", 8);
+            Assertions.assertTrue(Output);
 
+        }
     }

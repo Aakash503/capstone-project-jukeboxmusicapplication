@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a addMethod for testing addSongInPlayList method in PlaylistRepositoryTest.java class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" afterDir="false" />
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a getSongById method for testing addSongInPlayList method in PlaylistRepositoryTest.java class">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +60,7 @@
       <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.getSongById">
+  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.removeSongFromPlaylist">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jap.Main" />
       <module name="capstone-project-jukebox" />
@@ -94,11 +94,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongRepositoryTest.addMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistRepositoryTest.removeSongFromPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone-project-jukebox" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
-      <option name="METHOD_NAME" value="addMethod" />
+      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
+      <option name="METHOD_NAME" value="removeSongFromPlaylist" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlaylistRepositoryTest.removeSongFromPlaylist" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.getSongById" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.addMethod" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SongRepositoryTest.getAllSongs" />
-        <item itemvalue="JUnit.SongRepositoryTest.addMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -471,7 +471,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664114521648</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="added a getSongById method for testing addSongInPlayList method in PlaylistRepositoryTest.java class">
+      <created>1664116285890</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1664116285891</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -486,7 +493,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created connect method in DatabaseService class" />
     <MESSAGE value="created printConnectionStatus method in DatabaseService class" />
     <MESSAGE value="created dataservice object for Databaseservice class in main method and print connection status." />
     <MESSAGE value="created a SongRepositoryInterface" />
@@ -511,7 +517,8 @@
     <MESSAGE value="completed all test method in SongRepositoryTest.java class" />
     <MESSAGE value="added beforeEach setup and afterEach tearDown methods in PlaylistRepositoryTest.java class" />
     <MESSAGE value="added a addMethod for testing addSongInPlayList method in PlaylistRepositoryTest.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a addMethod for testing addSongInPlayList method in PlaylistRepositoryTest.java class" />
+    <MESSAGE value="added a getSongById method for testing addSongInPlayList method in PlaylistRepositoryTest.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a getSongById method for testing addSongInPlayList method in PlaylistRepositoryTest.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
