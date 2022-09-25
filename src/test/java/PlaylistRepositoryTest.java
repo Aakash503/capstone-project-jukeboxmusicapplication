@@ -9,17 +9,17 @@ import org.junit.jupiter.api.Test;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-class PlaylistRepositoryTest {
-    PlaylistRepository playlistRepository = null;
-    Song song;
-    DatabaseService databaseService = new DatabaseService();
+    class PlaylistRepositoryTest {
+        PlaylistRepository playlistRepository = null;
+        Song song;
+        DatabaseService databaseService = new DatabaseService();
 
-    @BeforeEach
-    void setUp() {
-        playlistRepository = new PlaylistRepository();
-        song = new Song();
-        databaseService = new DatabaseService();
-    }
+        @BeforeEach
+        void setUp() {
+            playlistRepository = new PlaylistRepository();
+            song = new Song();
+            databaseService = new DatabaseService();
+        }
 
     @AfterEach
     void tearDown() {
@@ -27,12 +27,23 @@ class PlaylistRepositoryTest {
         song = null;
     }
 
-    @Test
-    void addMethod() throws SQLException {
-        databaseService.connect();
-        Connection connection = databaseService.getConnection();
-        Assertions.assertTrue(playlistRepository.addSongInPlayList(connection, "myfavorate", 1));
+        @Test
+        void addMethod() throws SQLException {
+            databaseService.connect();
+            Connection connection = databaseService.getConnection();
+            Assertions.assertTrue(playlistRepository.addSongInPlayList(connection, "myfavorate", 1));
+
+        }
+
+        @Test
+        void getSongById() throws SQLException {
+            databaseService.connect();
+            Connection connection = databaseService.getConnection();
+//            Song output = playlistRepository.findSongInPlaylist(connection,);
+//            Song expectedOutput = playlistRepository.findSongInPlaylist(connection,);
+            Assertions.assertTrue(playlistRepository.addSongInPlayList(connection,
+                    "myfavorate", 8), "given song is added in the playlist");
+        }
+
 
     }
-
-}

@@ -91,6 +91,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
             }
 
         }
+        System.out.println("given song is added in the playlist");
         return song;
     }
 
