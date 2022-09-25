@@ -1,4 +1,4 @@
 package com.jap.repository;
 
-public class PlaylistRepository1 {
+public interface PlaylistRepository1 {
 }
