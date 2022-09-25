@@ -125,7 +125,6 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
         try (Statement statement = connection.createStatement()) {
             statement.execute(playListQuery);
         }
-        String insertPlayListQuery1 =
     }
 
 }

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="created a PlaylistRepository1 interface">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a query regarding creating a listOfPlaylist">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,20 +139,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663677254737</updated>
-    </task>
-    <task id="LOCAL-00004" summary="creating a sql query file.">
-      <created>1663679369014</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1663679369014</updated>
-    </task>
-    <task id="LOCAL-00005" summary="created a DatabaseService.java class">
-      <created>1663724329185</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1663724329185</updated>
     </task>
     <task id="LOCAL-00006" summary="created a MusicPlayerService.java class">
       <created>1663724512896</created>
@@ -483,7 +469,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664124202244</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="added a createListOfPlaylist method in PlaylistRepository1 interface">
+      <created>1664124858199</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1664124858199</updated>
+    </task>
+    <task id="LOCAL-00054" summary="added a query regarding creating a listOfPlaylist">
+      <created>1664128370031</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1664128370031</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -498,8 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="creating a DatabaseService.java class object in main class" />
-    <MESSAGE value="created findSongByArtistName and findSongByGenre methods in SongRepositoryInterface" />
     <MESSAGE value="added a play method in MusicPlayerService.java class" />
     <MESSAGE value="calling methods from PlaylistRepository class in the main method" />
     <MESSAGE value="added instructions in main method for calling create playlist method" />
@@ -523,7 +521,9 @@
     <MESSAGE value="added getAllSongs method for testing displayAllSongsInPlayList method in PlaylistRepositoryTest.java class" />
     <MESSAGE value="created a PlaylistRepository1.java class" />
     <MESSAGE value="created a PlaylistRepository1 interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a PlaylistRepository1 interface" />
+    <MESSAGE value="added a createListOfPlaylist method in PlaylistRepository1 interface" />
+    <MESSAGE value="added a query regarding creating a listOfPlaylist" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a query regarding creating a listOfPlaylist" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
