@@ -63,4 +63,9 @@ class SongRepositoryTest {
         Assertions.assertTrue(songRepository.addSong(connection, song1));
 
     }
+
+    @Test
+    void viewAllSongs() throws SQLException {
+        System.out.println("a");
+    }
 }
