@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a void viewAllSongs test method in SongRepositoryTest.java class">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="completed all test method in SongRepositoryTest.java class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +60,7 @@
       <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SongRepositoryTest.getAllSongs">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jap.Main" />
       <module name="capstone-project-jukebox" />
@@ -125,9 +125,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SongRepositoryTest.getAllSongs" />
         <item itemvalue="JUnit.SongRepositoryTest.addMethod" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SongRepositoryTest.getSongByArtistName" />
         <item itemvalue="JUnit.SongRepositoryTest.getSongByIdFailure" />
       </list>
@@ -450,7 +450,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664108396991</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="completed all test method in SongRepositoryTest.java class">
+      <created>1664110917329</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1664110917329</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -465,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="creating a connection variable to store the reference of connection in DatabaseService.java class" />
     <MESSAGE value="created constructor in databaseservice and initialising connection object" />
     <MESSAGE value="created getConnection method in databaseservice connection object" />
     <MESSAGE value="created connect method in DatabaseService class" />
@@ -490,7 +496,8 @@
     <MESSAGE value="added a void getSongByArtistName test method in SongRepositoryTest.java class" />
     <MESSAGE value="added a void addMethod test method in SongRepositoryTest.java class" />
     <MESSAGE value="added a void viewAllSongs test method in SongRepositoryTest.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a void viewAllSongs test method in SongRepositoryTest.java class" />
+    <MESSAGE value="completed all test method in SongRepositoryTest.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed all test method in SongRepositoryTest.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
