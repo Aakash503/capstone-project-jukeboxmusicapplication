@@ -17,7 +17,9 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
      */
     @Override
     public void createPlayList(Connection connection, String playListName) throws SQLException {
-        String playListQuery = "CREATE TABLE `" + playListName + "` (`songId` INT NOT NULL PRIMARY KEY ,`songName` VARCHAR(100),`albumName` VARCHAR(100),`genre` VARCHAR(100),`artistName` VARCHAR(100),`songPath`VARCHAR(100));";
+        String playListQuery = "CREATE TABLE `" + playListName + "` (`songId` INT NOT NULL PRIMARY KEY ," +
+                "`songName` VARCHAR(100),`albumName` VARCHAR(100),`genre` VARCHAR(100),`artistName` VARCHAR(100)," +
+                "`songPath`VARCHAR(100));";
         try (Statement statement = connection.createStatement()) {
             statement.execute(playListQuery);
         }

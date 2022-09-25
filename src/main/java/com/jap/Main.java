@@ -107,10 +107,11 @@ public class Main {
 
                     case 7:
                         System.out.println("Enter the playlist name");
-                        String playlist_Name = scanner.next();
+                        String playListName = scanner.next();
                         System.out.println("Enter the songId");
                         int id = scanner.nextInt();
-                        playlistRepository.addSongInPlayList(connection, playlist_Name, id);
+                        boolean b = playlistRepository.addSongInPlayList(connection, playListName, id);
+                        System.out.println(b);
                         break;
 
                     case 8:
@@ -127,8 +128,8 @@ public class Main {
                         System.out.println("Enter the playlist name");
                         String name = scanner.next();
                         System.out.println("Enter the songId");
-                        int song_d = scanner.nextInt();
-                        boolean result = playlistRepository.removeSongFromPlayList(connection, name, song_d);
+                        int snid = scanner.nextInt();
+                        boolean result = playlistRepository.removeSongFromPlayList(connection, name, snid);
                         System.out.println(result);
                         break;
                     case 10:
