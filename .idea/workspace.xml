@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added deleteSongFromPlaylist method for testing addSongInPlayList method in PlaylistRepositoryTest.java class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added getAllSongs method for testing displayAllSongsInPlayList method in PlaylistRepositoryTest.java class">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,13 +137,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663677254737</updated>
-    </task>
-    <task id="LOCAL-00001" summary="creating a PlayList.java class">
-      <created>1663678415401</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1663678415401</updated>
     </task>
     <task id="LOCAL-00002" summary="creating a directory folder for sql query.">
       <created>1663679277971</created>
@@ -482,7 +474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664116810172</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="added getAllSongs method for testing displayAllSongsInPlayList method in PlaylistRepositoryTest.java class">
+      <created>1664117919952</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1664117919954</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -497,7 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created dataservice object for Databaseservice class in main method and print connection status." />
     <MESSAGE value="created a SongRepositoryInterface" />
     <MESSAGE value="created a addSong method in SongRepositoryInterface" />
     <MESSAGE value="creating a DatabaseService.java class object in main class" />
@@ -522,7 +520,8 @@
     <MESSAGE value="added a addMethod for testing addSongInPlayList method in PlaylistRepositoryTest.java class" />
     <MESSAGE value="added a getSongById method for testing addSongInPlayList method in PlaylistRepositoryTest.java class" />
     <MESSAGE value="added deleteSongFromPlaylist method for testing addSongInPlayList method in PlaylistRepositoryTest.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added deleteSongFromPlaylist method for testing addSongInPlayList method in PlaylistRepositoryTest.java class" />
+    <MESSAGE value="added getAllSongs method for testing displayAllSongsInPlayList method in PlaylistRepositoryTest.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added getAllSongs method for testing displayAllSongsInPlayList method in PlaylistRepositoryTest.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
