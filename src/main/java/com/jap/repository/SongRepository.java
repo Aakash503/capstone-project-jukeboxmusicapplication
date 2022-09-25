@@ -65,12 +65,12 @@ public class SongRepository implements SongRepositoryInterface<Song> {
             // check if the result set is empty
             while (songsResultSet.next()) {
                 //  fetch the values of the current row from the result set
-                int songId = songsResultSet.getInt("song_Id");
-                String songName = songsResultSet.getString("song_Name");
-                String albumName = songsResultSet.getString("album_Name");
-                String genre = songsResultSet.getString("genre1");
-                String artist = songsResultSet.getString("artist_Name");
-                String songPath = songsResultSet.getString("song_Path");
+                int songId = songsResultSet.getInt("songId");
+                String songName = songsResultSet.getString("songName");
+                String albumName = songsResultSet.getString("albumName");
+                String genre = songsResultSet.getString("genre");
+                String artist = songsResultSet.getString("artistName");
+                String songPath = songsResultSet.getString("songPath");
 
                 // create a song object using the values fetched from the result set
                 song = new Song(songId, songName, albumName, genre, artist, songPath);

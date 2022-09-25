@@ -62,7 +62,8 @@ public class Main {
 
                         Song s1 = new Song(songName, albumName, genre, artistName, songPath);
 
-                        songRepository.addSong(connection, s1);
+                        boolean c = songRepository.addSong(connection, s1);
+                        System.out.println(c);
                         break;
 
                     case 2:

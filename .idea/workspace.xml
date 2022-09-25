@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="created a SongRepositoryTest.java class">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a void removeSong test method in SongRepositoryTest.java class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
@@ -63,7 +62,7 @@
       <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SongRepositoryTest.getSongByIdFailure">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jap.Main" />
       <module name="capstone-project-jukebox" />
@@ -73,6 +72,16 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongRepositoryTest.getSongByArtistName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-project-jukebox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
+      <option name="METHOD_NAME" value="getSongByArtistName" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,22 +124,13 @@
       </settings>
       <method v="2" />
     </configuration>
-    <configuration name="Write tests for method SongRepository.removeSongFromPlayList" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
-      <module name="capstone-project-jukebox" />
-      <settings run-config-name="Write tests for method SongRepository.removeSongFromPlayList" include-system-env-vars="true">
-        <jvm-args />
-        <selection-scope>method</selection-scope>
-        <selected-element key="com.jap.repository.SongRepository.removeSongFromPlayList:(Ljava/sql/Connection;I)Z" />
-      </settings>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SongRepositoryTest.getSongByIdFailure" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SongRepositoryTest.getSongByArtistName" />
+        <item itemvalue="JUnit.SongRepositoryTest.getSongByIdFailure" />
         <item itemvalue="JUnit.SongRepositoryTest.getSongByIdSuccess" />
         <item itemvalue="Diffblue Cover.Write tests for method SongRepository.findSongBySongId" />
-        <item itemvalue="Diffblue Cover.Write tests for method SongRepository.removeSongFromPlayList" />
       </list>
     </recent_temporary>
   </component>
@@ -416,7 +416,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664095982072</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="added a void getSongById test method in SongRepositoryTest.java class">
+      <created>1664103959770</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1664103959770</updated>
+    </task>
+    <task id="LOCAL-00041" summary="added a void removeSong test method in SongRepositoryTest.java class">
+      <created>1664104015349</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1664104015349</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -431,8 +445,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created fields in PlayList.java class" />
-    <MESSAGE value="created constructors in PlayList.java class" />
     <MESSAGE value="created getters and setters in PlayList.java class" />
     <MESSAGE value="added equals,hashcode and tostring methods in PlayList.java class" />
     <MESSAGE value="added fields url,username,passwords in DatabaseService.java class" />
@@ -456,7 +468,9 @@
     <MESSAGE value="added a statement to print message about inturrupted exeption to clear the threads" />
     <MESSAGE value="created a PlaylistRepositoryTest.java class" />
     <MESSAGE value="created a SongRepositoryTest.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a SongRepositoryTest.java class" />
+    <MESSAGE value="added a void getSongById test method in SongRepositoryTest.java class" />
+    <MESSAGE value="added a void removeSong test method in SongRepositoryTest.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a void removeSong test method in SongRepositoryTest.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

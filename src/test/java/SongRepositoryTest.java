@@ -46,8 +46,17 @@ class SongRepositoryTest {
 
     }
 
-//    @Test
-//    void getSongByArtistName() throws SQLException {
+    @Test
+    void getSongByArtistName() throws SQLException {
+        databaseService.connect();
+        Connection connection = databaseService.getConnection();
+        Song actual = songRepository.findSongByArtistName(connection, "pitbull");
+        Song expected = songRepository.findSongByArtistName(connection, actual.getArtistName());
+        Assertions.assertEquals(expected, actual);
+    }
+
+//    void addMethod()throws SQLException
+//    {
 //
 //    }
 }
