@@ -25,6 +25,7 @@ public class Main {
             System.out.println("4. Find a song by artistName");
             System.out.println("5. Find a song by songId");
             System.out.println("6. Create a new playlist");
+            System.out.println("7. Create a list of playlist");
             System.out.println("7. Add a song in your playlist");
             System.out.println("8. Play a song");
             System.out.println("9. Delete a song from playlist");
@@ -108,6 +109,12 @@ public class Main {
                         break;
 
                     case 7:
+                        System.out.println("Enter the catalogue name of playlists ");
+                        String name1 = scanner.next();
+                        playlistRepository.listCreater(connection, name1);
+                        break;
+
+                    case 8:
                         System.out.println("Enter the playlist name");
                         String playListName = scanner.next();
                         System.out.println("Enter the songId");
@@ -116,7 +123,7 @@ public class Main {
                         System.out.println(b);
                         break;
 
-                    case 8:
+                    case 9:
                         System.out.println("Enter playlist name");
                         String n1 = scanner.next();
                         System.out.println("enter songId");
@@ -126,7 +133,7 @@ public class Main {
                         musicPlayerService.play(path);
                         break;
 
-                    case 9:
+                    case 10:
                         System.out.println("Enter the playlist name");
                         String name = scanner.next();
                         System.out.println("Enter the songId");
@@ -135,13 +142,13 @@ public class Main {
                         System.out.println(result);
                         break;
 
-                    case 10:
+                    case 11:
                         System.out.println("enter the songId of Song you want to delete");
                         int sid1 = scanner.nextInt();
                         boolean b1 = songRepository.removeSongFromSongs(connection, sid1);
                         System.out.println(b1);
                         break;
-                    case 11:
+                    case 12:
                         System.out.println("Exit");
                         break;
                     default:
@@ -154,7 +161,7 @@ public class Main {
                 exception.printStackTrace();
             }
 
-        } while (choice != 11);
+        } while (choice != 12);
     }
 
 }

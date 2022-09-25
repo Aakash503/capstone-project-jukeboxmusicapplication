@@ -15,7 +15,12 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
         try (Statement statement = connection.createStatement()) {
             statement.execute(playListQuery);
         }
+
     };
+
+    public void listCreater(Connection connection, String listName1) throws SQLException {
+        playlistRepository1.createListOfPlaylist(connection, listName1);
+    }
 
     /**
      * This function adds a song to a playlist

@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a query regarding creating a listOfPlaylist">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="implementing PlaylistRepository1 method in PlaylistRepository.java by using lambda expression">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "last_opened_file_path": "C:/Users/acer/IdeaProjects/mc-1-calculator",
+    "last_opened_file_path": "C:/Users/acer/IdeaProjects/pc-2-prime-number-check",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -139,13 +139,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663677254737</updated>
-    </task>
-    <task id="LOCAL-00006" summary="created a MusicPlayerService.java class">
-      <created>1663724512896</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1663724512896</updated>
     </task>
     <task id="LOCAL-00007" summary="created a MusicPlayerService.java class">
       <created>1663724524670</created>
@@ -483,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664128370031</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="implementing PlaylistRepository1 method in PlaylistRepository.java by using lambda expression">
+      <created>1664128825547</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1664128825547</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -498,7 +498,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added a play method in MusicPlayerService.java class" />
     <MESSAGE value="calling methods from PlaylistRepository class in the main method" />
     <MESSAGE value="added instructions in main method for calling create playlist method" />
     <MESSAGE value="added a displayallsongsinplaylist method in PlaylistRepository.java class" />
@@ -523,7 +522,8 @@
     <MESSAGE value="created a PlaylistRepository1 interface" />
     <MESSAGE value="added a createListOfPlaylist method in PlaylistRepository1 interface" />
     <MESSAGE value="added a query regarding creating a listOfPlaylist" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a query regarding creating a listOfPlaylist" />
+    <MESSAGE value="implementing PlaylistRepository1 method in PlaylistRepository.java by using lambda expression" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing PlaylistRepository1 method in PlaylistRepository.java by using lambda expression" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
