@@ -9,21 +9,13 @@ import java.util.List;
 
 public class PlaylistRepository implements PlaylistRepositoryInterface {
 
-    /**
-     * It creates a new table in the database with the name of the playlist
-     *
-     * @param connection   Connection object
-     * @param playListName The name of the playlist to be created.
-     */
-    @Override
-    public void createPlayList(Connection connection, String playListName) throws SQLException {
-        String playListQuery = "CREATE TABLE `" + playListName + "` (`songId` INT NOT NULL PRIMARY KEY ," +
-                "`songName` VARCHAR(100),`albumName` VARCHAR(100),`genre` VARCHAR(100),`artistName` VARCHAR(100)," +
-                "`songPath`VARCHAR(100));";
+    PlaylistRepository1 playlistRepository1 = (connection, listName) -> {
+        String playListQuery = "CREATE TABLE `" + listName + "` (`playlistId` INT NOT NULL PRIMARY KEY ," +
+                "`playlistName` VARCHAR(100),";
         try (Statement statement = connection.createStatement()) {
             statement.execute(playListQuery);
         }
-    }
+    };
 
     /**
      * This function adds a song to a playlist
@@ -119,12 +111,22 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
         return songList;
     }
 
-    PlaylistRepository1 playlistRepository1 = new PlaylistRepository1() {
-        @Override
-        public void createListOfPlaylist(Connection connection, String listName) {
-
+    /**
+     * It creates a new table in the database with the name of the playlist
+     *
+     * @param connection   Connection object
+     * @param playListName The name of the playlist to be created.
+     */
+    @Override
+    public void createPlayList(Connection connection, String playListName) throws SQLException {
+        String playListQuery = "CREATE TABLE `" + playListName + "` (`songId` INT NOT NULL PRIMARY KEY ," +
+                "`songName` VARCHAR(100),`albumName` VARCHAR(100),`genre` VARCHAR(100),`artistName` VARCHAR(100)," +
+                "`songPath`VARCHAR(100));";
+        try (Statement statement = connection.createStatement()) {
+            statement.execute(playListQuery);
         }
-    };
+        String insertPlayListQuery1 =
+    }
 
 }
 
