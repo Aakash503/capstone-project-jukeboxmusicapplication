@@ -55,8 +55,12 @@ class SongRepositoryTest {
         Assertions.assertEquals(expected, actual);
     }
 
-//    void addMethod()throws SQLException
-//    {
-//
-//    }
+    @Test
+    void addMethod() throws SQLException {
+        databaseService.connect();
+        Connection connection = databaseService.getConnection();
+        Song song1 = new Song("asdf", "abhg", "aggs", "Rolex", "asd");
+        Assertions.assertTrue(songRepository.addSong(connection, song1));
+
+    }
 }

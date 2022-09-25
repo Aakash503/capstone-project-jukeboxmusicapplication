@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a void removeSong test method in SongRepositoryTest.java class">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a void getSongByArtistName test method in SongRepositoryTest.java class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +60,7 @@
       <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.SongRepositoryTest.addMethod">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jap.Main" />
       <module name="capstone-project-jukebox" />
@@ -72,6 +70,16 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongRepositoryTest.addMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-project-jukebox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
+      <option name="METHOD_NAME" value="addMethod" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -115,22 +123,13 @@
       </settings>
       <method v="2" />
     </configuration>
-    <configuration name="Write tests for method SongRepository.findSongBySongId" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration" activateToolWindowBeforeRun="false" temporary="true">
-      <module name="capstone-project-jukebox" />
-      <settings run-config-name="Write tests for method SongRepository.findSongBySongId" include-system-env-vars="true">
-        <jvm-args />
-        <selection-scope>method</selection-scope>
-        <selected-element key="com.jap.repository.SongRepository.findSongBySongId:(Ljava/sql/Connection;I)Lcom/jap/model/Song;" />
-      </settings>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SongRepositoryTest.addMethod" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SongRepositoryTest.getSongByArtistName" />
         <item itemvalue="JUnit.SongRepositoryTest.getSongByIdFailure" />
         <item itemvalue="JUnit.SongRepositoryTest.getSongByIdSuccess" />
-        <item itemvalue="Diffblue Cover.Write tests for method SongRepository.findSongBySongId" />
       </list>
     </recent_temporary>
   </component>
@@ -430,7 +429,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664104015349</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="added a void getSongByArtistName test method in SongRepositoryTest.java class">
+      <created>1664105808736</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1664105808736</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -445,7 +451,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created getters and setters in PlayList.java class" />
     <MESSAGE value="added equals,hashcode and tostring methods in PlayList.java class" />
     <MESSAGE value="added fields url,username,passwords in DatabaseService.java class" />
     <MESSAGE value="creating a connection variable to store the reference of connection in DatabaseService.java class" />
@@ -470,7 +475,8 @@
     <MESSAGE value="created a SongRepositoryTest.java class" />
     <MESSAGE value="added a void getSongById test method in SongRepositoryTest.java class" />
     <MESSAGE value="added a void removeSong test method in SongRepositoryTest.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a void removeSong test method in SongRepositoryTest.java class" />
+    <MESSAGE value="added a void getSongByArtistName test method in SongRepositoryTest.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a void getSongByArtistName test method in SongRepositoryTest.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
