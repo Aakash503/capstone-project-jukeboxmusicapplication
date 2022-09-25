@@ -15,7 +15,6 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
         try (Statement statement = connection.createStatement()) {
             statement.execute(playListQuery);
         }
-
     };
 
     public void listCreater(Connection connection, String listName1) throws SQLException {

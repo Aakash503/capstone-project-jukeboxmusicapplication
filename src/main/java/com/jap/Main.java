@@ -148,6 +148,7 @@ public class Main {
                         boolean b1 = songRepository.removeSongFromSongs(connection, sid1);
                         System.out.println(b1);
                         break;
+
                     case 12:
                         System.out.println("Exit");
                         break;
