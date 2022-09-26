@@ -4,29 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="correction in MusicPlayerService.java class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/SongsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/celtic-irish-scottish-tin-whistle-background-music-10455.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/we-wish-you-a-merry-christmas-english-carol-sheppard-flute-8848.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/jukebox_listofplaylist.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/jukebox_myfavorate.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/jukebox_routines.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/jukebox_songs.sql" afterDir="false" />
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="created a custom exception class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/PlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/model/PlayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/model/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepository1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepositoryInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/SongRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/SongRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/SongRepositoryInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/service/DatabaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/service/DatabaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/service/MusicPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/service/MusicPlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/playlist_table_queries.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/song_table_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/song_table_queries.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/model/PlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/model/PlayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,13 +146,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663677254737</updated>
-    </task>
-    <task id="LOCAL-00010" summary="created a PlaylistRepository.java class in repository package.">
-      <created>1663724786217</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1663724786217</updated>
     </task>
     <task id="LOCAL-00011" summary="created a SongRepository.java class in repository package.">
       <created>1663724907456</created>
@@ -508,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664166424554</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="created a custom exception class">
+      <created>1664176516608</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1664176516608</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -523,7 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="overloading paremeterised constructors by adding song id" />
     <MESSAGE value="corrected addsonginplaylist method playlistrepository class" />
     <MESSAGE value="added removesongfromplaylist method in playlistrepository class" />
     <MESSAGE value="added a statement to print message about inturrupted exeption to clear the threads" />
@@ -548,7 +529,8 @@
     <MESSAGE value="created a listCreater method in PlaylistRepository.java" />
     <MESSAGE value="calling a listCreater method in main method" />
     <MESSAGE value="correction in MusicPlayerService.java class" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction in MusicPlayerService.java class" />
+    <MESSAGE value="created a custom exception class" />
+    <option name="LAST_COMMIT_MESSAGE" value="created a custom exception class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

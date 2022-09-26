@@ -9,7 +9,6 @@ import java.util.List;
 
 
 public class PlaylistRepository implements PlaylistRepositoryInterface {
-
     PlaylistRepository1 playlistRepository1 = (connection, listName) -> {
         String playListQuery = "CREATE TABLE `" + listName + "` (`playlistId` INT NOT NULL PRIMARY KEY ," +
                 "`playlistName` VARCHAR(100),";

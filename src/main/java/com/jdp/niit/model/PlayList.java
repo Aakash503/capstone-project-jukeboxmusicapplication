@@ -4,8 +4,8 @@ package com.jdp.niit.model;
 import java.util.Objects;
 
 public class PlayList {
-    private int id;
-    private String name;
+    private final int id;
+    private final String name;
     private Song song;
 
 
@@ -18,16 +18,9 @@ public class PlayList {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
 
@@ -54,11 +47,7 @@ public class PlayList {
 
     @Override
     public String toString() {
-        return "PlayList{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", song=" + song +
-                '}';
+        return "PlayList{" + "id=" + id + ", name='" + name + '\'' + ", song=" + song + '}';
     }
 }
 

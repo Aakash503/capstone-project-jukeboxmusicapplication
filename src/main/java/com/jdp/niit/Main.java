@@ -1,5 +1,6 @@
 package com.jdp.niit;
 
+import com.jdp.niit.model.PlayList;
 import com.jdp.niit.model.Song;
 import com.jdp.niit.repository.PlaylistRepository;
 import com.jdp.niit.repository.SongRepository;
@@ -151,11 +152,21 @@ public class Main {
                         break;
 
                     case 12:
+                        System.out.println("Enter the listname in which you want to store the all playlists");
+                        String list1 = scanner.next();
+                        System.out.println("enter the your playlistId");
+                        int id1 = scanner.nextInt();
+                        System.out.println("Enter your playlist name");
+                        String list_Name = scanner.next();
+                        PlayList p1 = new PlayList(id1, list_Name);
+                        playlistRepository.addPlaylistInList(connection, p1, list1);
+                        break;
+
+                    case 13:
                         System.out.println("Exit");
                         break;
                     default:
                         System.err.println("Invalid choice");
-
                 }
 
             } catch (SQLException exception) {
@@ -165,7 +176,7 @@ public class Main {
                 System.out.println(exception.getMessage());
             }
 
-        } while (choice != 12);
+        } while (choice != 13);
     }
 
 }
