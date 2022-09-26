@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="implementing PlaylistRepository1 method in PlaylistRepository.java by using lambda expression">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="calling a listCreater method in main method">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Cookiesan_Sombre_Naruto.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/Zuchu-Fire-New-Song-Download-Mp3_SongsZilla.Net_.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/songs/superhero-intro-111393.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jap/repository/PlaylistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/song_table_queries.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/song_table_queries.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "last_opened_file_path": "C:/Users/acer/IdeaProjects/pc-2-prime-number-check",
+    "last_opened_file_path": "C:/Users/acer/IdeaProjects/capstone-project-jukebox/src/main/resources/songs",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -61,13 +64,16 @@
       <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.getAllSongs">
-    <configuration name="PlaylistRepositoryTest.addMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jap.Main" />
       <module name="capstone-project-jukebox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
-      <option name="METHOD_NAME" value="addMethod" />
-      <option name="TEST_OBJECT" value="method" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -123,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.getAllSongs" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.deleteSongFromPlaylist" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.removeSongFromPlaylist" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.getSongById" />
-        <item itemvalue="JUnit.PlaylistRepositoryTest.addMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -139,20 +145,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663677254737</updated>
-    </task>
-    <task id="LOCAL-00007" summary="created a MusicPlayerService.java class">
-      <created>1663724524670</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1663724524670</updated>
-    </task>
-    <task id="LOCAL-00008" summary="created a Song.java class">
-      <created>1663724601294</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1663724601294</updated>
     </task>
     <task id="LOCAL-00009" summary="created a MusicPlayerRepository.java class in repository package.">
       <created>1663724696621</created>
@@ -483,7 +475,21 @@
       <option name="project" value="LOCAL" />
       <updated>1664128825547</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="created a listCreater method in PlaylistRepository.java">
+      <created>1664130523767</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1664130523767</updated>
+    </task>
+    <task id="LOCAL-00057" summary="calling a listCreater method in main method">
+      <created>1664130595069</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1664130595069</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -498,8 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="calling methods from PlaylistRepository class in the main method" />
-    <MESSAGE value="added instructions in main method for calling create playlist method" />
     <MESSAGE value="added a displayallsongsinplaylist method in PlaylistRepository.java class" />
     <MESSAGE value="overloading paremeterised constructors by adding song id" />
     <MESSAGE value="corrected addsonginplaylist method playlistrepository class" />
@@ -523,7 +527,9 @@
     <MESSAGE value="added a createListOfPlaylist method in PlaylistRepository1 interface" />
     <MESSAGE value="added a query regarding creating a listOfPlaylist" />
     <MESSAGE value="implementing PlaylistRepository1 method in PlaylistRepository.java by using lambda expression" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementing PlaylistRepository1 method in PlaylistRepository.java by using lambda expression" />
+    <MESSAGE value="created a listCreater method in PlaylistRepository.java" />
+    <MESSAGE value="calling a listCreater method in main method" />
+    <option name="LAST_COMMIT_MESSAGE" value="calling a listCreater method in main method" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

@@ -26,10 +26,10 @@ public class Main {
             System.out.println("5. Find a song by songId");
             System.out.println("6. Create a new playlist");
             System.out.println("7. Create a list of playlist");
-            System.out.println("7. Add a song in your playlist");
-            System.out.println("8. Play a song");
-            System.out.println("9. Delete a song from playlist");
-            System.out.println("10. Delete Song from songs");
+            System.out.println("8. Add a song in your playlist");
+            System.out.println("9. Play a song");
+            System.out.println("10. Delete a song from playlist");
+            System.out.println("11. Delete Song from songs");
             Scanner scanner = new Scanner(System.in);
 
             System.out.print("Enter your choice: ");
