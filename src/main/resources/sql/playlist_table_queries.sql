@@ -24,3 +24,6 @@
 --UPDATE `jukebox`.`myfavorate` SET `songName` = 'cookisien', `albumName` = 'naruto', `artistName` = ' tyler bates', `songPath` = 'src/main/resources/songs/Cookiesan_Sombre_Naruto.wav' WHERE (`songId` = '2');
 --INSERT INTO `jukebox`.`myfavorate` (`songId`, `songName`, `albumName`, `genre`, `artistName`, `songPath`) VALUES ('3', 'yashuharu', 'naruto', 'rock', 'recardo silva', 'src/main/resources/songs/Yasuharu_Takanashi_Scene_of_a_Disaster.wav');
 --UPDATE `jukebox`.`songs` SET `songName` = 'celtic', `albumNAme` = 'the whistle', `genre` = 'pop', `artistName` = 'julius', `songPath` = 'src/main/resources/songs/celtic-irish-scottish-tin-whistle-background-music-10455.wav' WHERE (`songId` = '6');
+
+--UPDATE `jukebox`.`listofplaylist` SET `playListId` = '3' WHERE (`playListId` = '6');
+--UPDATE `jukebox`.`listofplaylist` SET `playListId` = '4' WHERE (`playListId` = '7');

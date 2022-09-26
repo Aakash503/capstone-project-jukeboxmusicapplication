@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SongRepository implements SongRepositoryInterface<Song> {
-
     @Override
     public boolean addSong(Connection connection, Song song) throws SQLException {
         String insertQuery = "INSERT INTO `jukebox`.`songs` " + "( `songName`, `albumName`,`genre`,`artistName`,`songPath`) " + "VALUES ( ?, ?,?,?,?);";
@@ -80,7 +79,7 @@ public class SongRepository implements SongRepositoryInterface<Song> {
     }
 
     @Override
-    public Song findSongBySongId(Connection connection, int id) throws SQLException {
+    public Song findSongBySongId(Connection connection, int id) throws SQLException, SongsException {
         String searchQuery = "SELECT * FROM `jukebox`.`songs` WHERE(`songId` = ?);";
         Song song = new Song();
 
@@ -104,7 +103,12 @@ public class SongRepository implements SongRepositoryInterface<Song> {
             }
 
         }
-        return song;
+        if (id == 0) {
+            System.out.println("SongsException");
+            throw new SongsException("id can not be zero");
+        } else {
+            return song;
+        }
     }
 
     public boolean removeSongFromSongs(Connection connection, int songId) throws SQLException, SongsException {
@@ -115,6 +119,7 @@ public class SongRepository implements SongRepositoryInterface<Song> {
             numberOfRowsAffected = preparedStatement.executeUpdate();
         }
         if (songId == 0) {
+            System.out.println("SongsException");
             throw new SongsException("songId can not be zero");
         } else {
             return numberOfRowsAffected > 0;

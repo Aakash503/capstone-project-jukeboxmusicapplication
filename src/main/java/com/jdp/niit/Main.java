@@ -159,7 +159,8 @@ public class Main {
                         System.out.println("Enter your playlist name");
                         String listName = scanner.next();
                         PlayList p1 = new PlayList(id1, listName);
-                        playlistRepository.addPlaylistInList(connection, p1);
+                        boolean b2 = playlistRepository.addPlaylistInList(connection, p1);
+                        System.out.println(b2);
                         break;
 
                     case 13:

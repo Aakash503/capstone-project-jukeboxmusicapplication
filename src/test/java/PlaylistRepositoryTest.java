@@ -49,7 +49,7 @@ class PlaylistRepositoryTest {
     void deleteSongFromPlaylist() throws SQLException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        boolean Output = playlistRepository.removeSongFromPlayList(connection, "myfavorate", 10);
+        boolean Output = playlistRepository.removeSongFromPlayList(connection, "songs", 15);
         Assertions.assertTrue(Output);
 
     }

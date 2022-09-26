@@ -31,7 +31,7 @@ class SongRepositoryTest {
     }
 
     @Test
-    void getSongById() throws SQLException {
+    void getSongById() throws SQLException, SongsException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
         Song output = songRepository.findSongBySongId(connection, 1);
