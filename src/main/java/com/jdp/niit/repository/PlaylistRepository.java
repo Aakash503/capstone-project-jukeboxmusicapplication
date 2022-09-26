@@ -10,8 +10,7 @@ import java.util.List;
 
 public class PlaylistRepository implements PlaylistRepositoryInterface {
     PlaylistRepository1 playlistRepository1 = (connection, listName) -> {
-        String playListQuery = "CREATE TABLE `" + listName + "` (`playlistId` INT NOT NULL PRIMARY KEY ," +
-                "`playlistName` VARCHAR(100),";
+        String playListQuery = "CREATE TABLE `" + listName + "` (`playlistId` INT NOT NULL PRIMARY KEY ," + "`playlistName` VARCHAR(100),";
         try (Statement statement = connection.createStatement()) {
             statement.execute(playListQuery);
 
@@ -33,8 +32,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
     @Override
     public boolean addSongInPlayList(Connection connection, String playListName, int songId) throws SQLException {
 
-        String insertQuery = "INSERT INTO`" + playListName + "` (`songId`,`songName`,`albumName`,`genre`,`artistName`,`songPath`)"
-                + "select * From `jukebox`.`songs`where`songId`=?";
+        String insertQuery = "INSERT INTO`" + playListName + "` (`songId`,`songName`,`albumName`,`genre`,`artistName`,`songPath`)" + "select * From `jukebox`.`songs`where`songId`=?";
 
         int numberOfRowsAffected;
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
@@ -124,16 +122,15 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
      */
     @Override
     public void createPlayList(Connection connection, String playListName) throws SQLException {
-        String playListQuery = "CREATE TABLE `" + playListName + "` (`songId` INT NOT NULL PRIMARY KEY ," +
-                "`songName` VARCHAR(100),`albumName` VARCHAR(100),`genre` VARCHAR(100),`artistName` VARCHAR(100)," +
-                "`songPath`VARCHAR(100));";
+        String playListQuery = "CREATE TABLE `" + playListName + "` (`songId` INT NOT NULL PRIMARY KEY ," + "`songName` VARCHAR(100),`albumName` VARCHAR(100),`genre` VARCHAR(100),`artistName` VARCHAR(100)," + "`songPath`VARCHAR(100));";
         try (Statement statement = connection.createStatement()) {
             statement.execute(playListQuery);
         }
     }
 
-    public boolean addPlaylistInList(Connection connection, PlayList playList, String listName) throws SQLException {
-        String insertQuery = "INSERT INTO `jukebox`.`" + listName + "` " + "( `id`, `name`,) " + "VALUES ( ?, ?);";
+    public boolean addPlaylistInList(Connection connection, PlayList playList) throws SQLException {
+        String insertQuery = "INSERT INTO `jukebox`.`listofplaylist` (`playListId`, `playListName`) VALUES (?, ?);";
+
         int numberOfRowsAffected;
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
             preparedStatement.setInt(1, playList.getId());

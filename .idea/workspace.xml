@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="created a custom exception class">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a addplaylist method in PlaylistRepository.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/model/PlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/model/PlayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/model/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/model/Song.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,7 @@
       <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SongRepositoryTest">
+  <component name="RunManager" selected="Application.com.jdp.niit.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jap.Main" />
       <module name="capstone-project-jukebox" />
@@ -90,21 +91,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaylistRepositoryTest.deleteSongFromPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone-project-jukebox" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
-      <option name="METHOD_NAME" value="deleteSongFromPlaylist" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaylistRepositoryTest.getAllSongs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaylistRepositoryTest.getSongByArtistName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="capstone-project-jukebox" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
-      <option name="METHOD_NAME" value="getAllSongs" />
+      <option name="METHOD_NAME" value="getSongByArtistName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -130,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SongRepositoryTest" />
         <item itemvalue="Application.com.jdp.niit.Main" />
+        <item itemvalue="JUnit.PlaylistRepositoryTest" />
+        <item itemvalue="JUnit.PlaylistRepositoryTest.getSongByArtistName" />
+        <item itemvalue="JUnit.SongRepositoryTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.PlaylistRepositoryTest.getAllSongs" />
-        <item itemvalue="JUnit.PlaylistRepositoryTest.deleteSongFromPlaylist" />
       </list>
     </recent_temporary>
   </component>
@@ -146,13 +146,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663677254737</updated>
-    </task>
-    <task id="LOCAL-00011" summary="created a SongRepository.java class in repository package.">
-      <created>1663724907456</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1663724907456</updated>
     </task>
     <task id="LOCAL-00012" summary="added fields in song class">
       <created>1663725137142</created>
@@ -490,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664176516608</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="added a addplaylist method in PlaylistRepository.java">
+      <created>1664180532668</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1664180532668</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -505,7 +505,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="corrected addsonginplaylist method playlistrepository class" />
     <MESSAGE value="added removesongfromplaylist method in playlistrepository class" />
     <MESSAGE value="added a statement to print message about inturrupted exeption to clear the threads" />
     <MESSAGE value="created a PlaylistRepositoryTest.java class" />
@@ -530,7 +529,8 @@
     <MESSAGE value="calling a listCreater method in main method" />
     <MESSAGE value="correction in MusicPlayerService.java class" />
     <MESSAGE value="created a custom exception class" />
-    <option name="LAST_COMMIT_MESSAGE" value="created a custom exception class" />
+    <MESSAGE value="added a addplaylist method in PlaylistRepository.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a addplaylist method in PlaylistRepository.java" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

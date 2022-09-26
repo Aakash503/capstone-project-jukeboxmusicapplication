@@ -43,10 +43,6 @@ public class Song {
         return albumName;
     }
 
-    public void setAlbumName(String albumName) {
-        this.albumName = albumName;
-    }
-
     public String getGenre() {
         return genre;
     }
@@ -56,18 +52,8 @@ public class Song {
         return songPath;
     }
 
-    public void setSongPath(String songPath) {
-        this.songPath = songPath;
-    }
-
     public String getArtistName() {
         return artistName;
-    }
-
-
-
-    public void setId(int id) {
-        this.id = id;
     }
 
 

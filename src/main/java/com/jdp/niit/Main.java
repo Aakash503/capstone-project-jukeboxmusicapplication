@@ -32,8 +32,9 @@ public class Main {
             System.out.println("9. Play a song");
             System.out.println("10. Delete a song from playlist");
             System.out.println("11. Delete Song from songs");
-            Scanner scanner = new Scanner(System.in);
+            System.out.println("12. to store your playlist ");
 
+            Scanner scanner = new Scanner(System.in);
             System.out.print("Enter your choice: ");
 
             choice = scanner.nextInt();
@@ -152,14 +153,13 @@ public class Main {
                         break;
 
                     case 12:
-                        System.out.println("Enter the listname in which you want to store the all playlists");
-                        String list1 = scanner.next();
+
                         System.out.println("enter the your playlistId");
                         int id1 = scanner.nextInt();
                         System.out.println("Enter your playlist name");
-                        String list_Name = scanner.next();
-                        PlayList p1 = new PlayList(id1, list_Name);
-                        playlistRepository.addPlaylistInList(connection, p1, list1);
+                        String listName = scanner.next();
+                        PlayList p1 = new PlayList(id1, listName);
+                        playlistRepository.addPlaylistInList(connection, p1);
                         break;
 
                     case 13:
