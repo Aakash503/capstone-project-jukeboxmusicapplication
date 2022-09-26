@@ -1,6 +1,6 @@
-import com.jap.model.Song;
-import com.jap.repository.PlaylistRepository;
-import com.jap.service.DatabaseService;
+import com.jdp.niit.model.Song;
+import com.jdp.niit.repository.PlaylistRepository;
+import com.jdp.niit.service.DatabaseService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

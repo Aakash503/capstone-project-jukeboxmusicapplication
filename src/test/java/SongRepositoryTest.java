@@ -1,6 +1,7 @@
-import com.jap.model.Song;
-import com.jap.repository.SongRepository;
-import com.jap.service.DatabaseService;
+import com.jdp.niit.model.Song;
+import com.jdp.niit.repository.SongRepository;
+import com.jdp.niit.repository.SongsException;
+import com.jdp.niit.service.DatabaseService;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -39,10 +40,10 @@ class SongRepositoryTest {
     }
 
     @Test
-    void removeSong() throws SQLException {
+    void removeSong() throws SQLException, SongsException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        boolean Output = songRepository.removeSongFromSongs(connection, 4);
+        boolean Output = songRepository.removeSongFromSongs(connection, 13);
         Assertions.assertTrue(Output);
 
     }
@@ -51,7 +52,7 @@ class SongRepositoryTest {
     void getSongByArtistName() throws SQLException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        Song actual = songRepository.findSongByArtistName(connection, "pitbull");
+        Song actual = songRepository.findSongByArtistName(connection, "arijitsingh");
         Song expected = songRepository.findSongByArtistName(connection, actual.getArtistName());
         Assertions.assertEquals(expected, actual);
     }
@@ -60,7 +61,7 @@ class SongRepositoryTest {
     void addMethod() throws SQLException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        Song song1 = new Song("asdf", "abhg", "aggs", "Rolex", "asd");
+        Song song1 = new Song("aaaa", "nnn", "ggg", "ryan", "ipp");
         Assertions.assertTrue(songRepository.addSong(connection, song1));
 
     }
