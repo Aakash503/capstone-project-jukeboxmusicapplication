@@ -51,7 +51,7 @@ public class SongRepository implements SongRepositoryInterface<Song> {
     }
 
     @Override
-    public Song findSongByArtistName(Connection connection, String artistName) throws SQLException {
+    public Song findSongByArtistName(Connection connection, String artistName) throws SQLException, SongsException {
         String searchQuery = "SELECT * FROM `jukebox`.`songs` WHERE(`artistName` = ?);";
         Song song = new Song();
 
@@ -73,6 +73,10 @@ public class SongRepository implements SongRepositoryInterface<Song> {
                 // create a song object using the values fetched from the result set
                 song = new Song(songId, songName, albumName, genre, artist, songPath);
             }
+        }
+        if (!artistName.equalsIgnoreCase(song.getArtistName())) {
+            System.out.println("Song exception");
+            throw new SongsException("song not found");
         }
         return song;
 

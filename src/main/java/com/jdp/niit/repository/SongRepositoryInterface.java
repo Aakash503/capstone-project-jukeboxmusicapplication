@@ -10,7 +10,7 @@ public interface SongRepositoryInterface<Song> {
 
     List<Song> displayAllSongs(Connection connection) throws SQLException;
 
-    Song findSongByArtistName(Connection connection, String artistName) throws SQLException;
+    Song findSongByArtistName(Connection connection, String artistName) throws SQLException, SongsException;
 
     Song findSongBySongId(Connection connection, int id) throws SQLException, SongsException;
 

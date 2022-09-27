@@ -49,7 +49,7 @@ class SongRepositoryTest {
     }
 
     @Test
-    void getSongByArtistName() throws SQLException {
+    void getSongByArtistName() throws SQLException, SongsException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
         Song actual = songRepository.findSongByArtistName(connection, "arijitsingh");

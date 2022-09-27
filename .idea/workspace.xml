@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a correction in findSongById method in SongRepository.java">
+    <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="added a correction in MusicPlayerService.java class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/service/MusicPlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/service/MusicPlayerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaylistRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/SongRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/SongRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/SongRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/SongRepositoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SongRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,13 +145,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663677254737</updated>
-    </task>
-    <task id="LOCAL-00014" summary="added getters and setters in song class">
-      <created>1663725362406</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1663725362406</updated>
     </task>
     <task id="LOCAL-00015" summary="added equals, hashcode and tostring methods in song class">
       <created>1663725569602</created>
@@ -489,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664192058578</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="added a correction in MusicPlayerService.java class">
+      <created>1664248748042</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1664248748042</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -504,7 +504,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created a PlaylistRepositoryTest.java class" />
     <MESSAGE value="created a SongRepositoryTest.java class" />
     <MESSAGE value="added a void getSongById test method in SongRepositoryTest.java class" />
     <MESSAGE value="added a void removeSong test method in SongRepositoryTest.java class" />
@@ -529,7 +528,8 @@
     <MESSAGE value="added a addplaylist method in PlaylistRepository.java" />
     <MESSAGE value="added a correction in addplaylist method in PlaylistRepository.java" />
     <MESSAGE value="added a correction in findSongById method in SongRepository.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a correction in findSongById method in SongRepository.java" />
+    <MESSAGE value="added a correction in MusicPlayerService.java class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a correction in MusicPlayerService.java class" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
