@@ -33,6 +33,7 @@ public class Main {
             System.out.println("10. Delete a song from playlist");
             System.out.println("11. Delete Song from songs");
             System.out.println("12. to store your playlist ");
+            System.out.println("13. Exit");
 
             Scanner scanner = new Scanner(System.in);
             System.out.print("Enter your choice: ");
@@ -78,8 +79,10 @@ public class Main {
                     case 3:
                         System.out.println("Enter your Playlist name");
                         String playlistName = scanner.next();
-                        playlistRepository.displayAllSongsInPlaylist(connection, playlistName).forEach(System.out::println);
+                        playlistRepository.displayAllSongsInPlaylist(connection, playlistName)
+                                .forEach(System.out::println);
                         break;
+
 
                     case 4:
                         System.out.println("find a song by Artist Name");

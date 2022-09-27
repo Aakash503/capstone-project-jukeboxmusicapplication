@@ -32,7 +32,7 @@ class PlaylistRepositoryTest {
     void addMethod() throws SQLException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        Assertions.assertTrue(playlistRepository.addSongInPlayList(connection, "myfavorate", 5));
+        Assertions.assertTrue(playlistRepository.addSongInPlayList(connection, "myfavorate", 10));
 
     }
 
@@ -49,7 +49,7 @@ class PlaylistRepositoryTest {
     void deleteSongFromPlaylist() throws SQLException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        boolean Output = playlistRepository.removeSongFromPlayList(connection, "songs", 15);
+        boolean Output = playlistRepository.removeSongFromPlayList(connection, "myfavorate", 15);
         Assertions.assertTrue(Output);
 
     }

@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 
 public class MusicPlayerService {
+
+
     public void play(String songPath) {
         // 2. a file object that contains our song
         File songFile = new File(songPath);
@@ -22,31 +24,51 @@ public class MusicPlayerService {
             // 7. start the sound file
             clip.start();
 
-            System.out.println("select option");
-            System.out.println("1. Pause a song");
-            System.out.println("2. Play song in loop");
+            long clipPause = 0;
+            int choice;
 
-            Scanner scanner = new Scanner(System.in);
-            int option = scanner.nextInt();
+            do {
+                System.out.println("Select option");
+                System.out.println("1. Play in loop");
+                System.out.println("2. Pause the song");
+                System.out.println("3. Resume the song");
+                System.out.println("4. Restart the song");
+                System.out.println("5. Exit");
+                Scanner scanner = new Scanner(System.in);
+                choice = scanner.nextInt();
+                switch (choice) {
+                    case 1:
+                        // Play song in loop
+                        System.out.println("Enter no. of times you want to play this song in loop");
+                        int index = scanner.nextInt();
+                        clip.loop(index);
+                        break;
+                    case 2:
+                        clipPause = clip.getMicrosecondPosition();
+                        clip.stop();
+                        System.out.println("Song paused");
+                        break;
+                    case 3: {
+                        clip.setMicrosecondPosition(clipPause);
+                        clip.start();
+                        System.out.println("Song Resume");
+                        break;
+                    }
+                    case 4: {
+                        clip.setMicrosecondPosition(0);
+                        clip.start();
+                        System.out.println("Song Restarted");
+                        break;
+                    }
 
-            switch (option) {
-                case 1:
-                    clip.close();
-                    System.out.println("song paused");
-                    break;
-
-                case 2:
-                    System.out.println("Enter the count in which you want to play song in loop");
-                    int count = scanner.nextInt();
-                    clip.loop(count);
-                    break;
-                case 3:
-                    System.out.println("EXIT");
-                    break;
-                default:
-                    System.out.println("invalid choice");
-
-            }
+                    case 5: {
+                        System.out.println("exit");
+                        break;
+                    }
+                    default:
+                        System.out.println("Invalid option");
+                }
+            } while (choice != 5);
 
             // 8. pause the current thread for the time the song is being played
             long songDurationInMilliseconds = clip.getMicrosecondLength() / 1000L;

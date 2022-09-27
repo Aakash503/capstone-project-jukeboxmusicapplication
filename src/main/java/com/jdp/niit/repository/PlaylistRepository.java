@@ -114,6 +114,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
         return songList;
     }
 
+
     /**
      * It creates a new table in the database with the name of the playlist
      *
@@ -141,6 +142,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
         }
         return numberOfRowsAffected > 0;
     }
+
 
 }
 
