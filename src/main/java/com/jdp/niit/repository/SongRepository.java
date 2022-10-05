@@ -2,13 +2,13 @@ package com.jdp.niit.repository;
 
 
 import com.jdp.niit.model.Song;
+import com.jdp.niit.songexception.SongsException;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SongRepository implements SongRepositoryInterface<Song> {
-    @Override
+public class SongRepository {
     public boolean addSong(Connection connection, Song song) throws SQLException {
         String insertQuery = "INSERT INTO `jukebox`.`songs` " + "( `songName`, `albumName`,`genre`,`artistName`,`songPath`) " + "VALUES ( ?, ?,?,?,?);";
         int numberOfRowsAffected;
@@ -50,10 +50,10 @@ public class SongRepository implements SongRepositoryInterface<Song> {
         return songList;
     }
 
-    @Override
-    public Song findSongByArtistName(Connection connection, String artistName) throws SQLException, SongsException {
+    public List<Song> findSongByArtistName(Connection connection, String artistName) throws SQLException, SongsException {
         String searchQuery = "SELECT * FROM `jukebox`.`songs` WHERE(`artistName` = ?);";
         Song song = new Song();
+        List<Song> songList1 = new ArrayList<>();
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(searchQuery)) {
 
@@ -72,18 +72,17 @@ public class SongRepository implements SongRepositoryInterface<Song> {
 
                 // create a song object using the values fetched from the result set
                 song = new Song(songId, songName, albumName, genre, artist, songPath);
+                songList1.add(song);
             }
         }
         if (!artistName.equalsIgnoreCase(song.getArtistName())) {
-            System.out.println("Song exception");
             throw new SongsException("song not found");
         }
-        return song;
+        return songList1;
 
     }
 
-    @Override
-    public Song findSongBySongId(Connection connection, int id) throws SQLException, SongsException {
+    public Song findSongById(Connection connection, int id) throws SQLException, SongsException {
         String searchQuery = "SELECT * FROM `jukebox`.`songs` WHERE(`songId` = ?);";
         Song song = new Song();
 
@@ -108,8 +107,7 @@ public class SongRepository implements SongRepositoryInterface<Song> {
 
         }
         if (id == 0) {
-            System.out.println("SongsException");
-            throw new SongsException("id can not be zero");
+            throw new SongsException("songId can not be zero");
         } else {
             return song;
         }
@@ -123,7 +121,6 @@ public class SongRepository implements SongRepositoryInterface<Song> {
             numberOfRowsAffected = preparedStatement.executeUpdate();
         }
         if (songId == 0) {
-            System.out.println("SongsException");
             throw new SongsException("songId can not be zero");
         } else {
             return numberOfRowsAffected > 0;

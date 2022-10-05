@@ -20,6 +20,7 @@ public class Song {
         this.artistName = artistName;
         this.songPath = songPath;
     }
+
     public Song(int id, String songName, String albumName, String genre, String artistName, String songPath) {
         this.id = id;
         this.songName = songName;
@@ -62,8 +63,7 @@ public class Song {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Song song = (Song) o;
-        return id == song.id && songName.equals(song.songName) && albumName.equals(song.albumName) &&
-                genre.equals(song.genre) && artistName.equals(song.artistName) && songPath.equals(song.songPath);
+        return id == song.id && songName.equals(song.songName) && albumName.equals(song.albumName) && genre.equals(song.genre) && artistName.equals(song.artistName) && songPath.equals(song.songPath);
     }
 
     @Override
@@ -73,13 +73,6 @@ public class Song {
 
     @Override
     public String toString() {
-        return "Song{" +
-                "id=" + id +
-                ", songName='" + songName + '\'' +
-                ", albumName='" + albumName + '\'' +
-                ", genre='" + genre + '\'' +
-                ", artistName='" + artistName + '\'' +
-                ", songPath='" + songPath + '\'' +
-                '}';
+        return "Song{" + "id=" + id + ", songName='" + songName + '\'' + ", albumName='" + albumName + '\'' + ", genre='" + genre + '\'' + ", artistName='" + artistName + '\'' + ", songPath='" + songPath + '\'' + '}';
     }
 }

@@ -1,7 +1,7 @@
 import com.jdp.niit.model.Song;
 import com.jdp.niit.repository.SongRepository;
-import com.jdp.niit.repository.SongsException;
 import com.jdp.niit.service.DatabaseService;
+import com.jdp.niit.songexception.SongsException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -34,8 +34,8 @@ class SongRepositoryTest {
     void getSongById() throws SQLException, SongsException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        Song output = songRepository.findSongBySongId(connection, 1);
-        Song expectedOutput = songRepository.findSongBySongId(connection, output.getSongId());
+        Song output = songRepository.findSongById(connection, 1);
+        Song expectedOutput = songRepository.findSongById(connection, output.getSongId());
         Assertions.assertEquals(expectedOutput, output);
     }
 
@@ -52,8 +52,8 @@ class SongRepositoryTest {
     void getSongByArtistName() throws SQLException, SongsException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        Song actual = songRepository.findSongByArtistName(connection, "arijitsingh");
-        Song expected = songRepository.findSongByArtistName(connection, actual.getArtistName());
+        List<Song> actual = songRepository.findSongByArtistName(connection, "emanuel");
+        List<Song> expected = songRepository.findSongByArtistName(connection, "emanuel");
         Assertions.assertEquals(expected, actual);
     }
 

@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class PlaylistRepository implements PlaylistRepositoryInterface {
-    PlaylistRepository1 playlistRepository1 = (connection, listName) -> {
-        String playListQuery = "CREATE TABLE `" + listName + "` (`playlistId` INT NOT NULL PRIMARY KEY ," + "`playlistName` VARCHAR(100),";
+public class PlaylistRepository {
+    RepositoryInterface repositoryInterface = (connection, listName) -> {
+        String playListQuery = "CREATE TABLE `" + listName + "` (`playlistId` INT NOT NULL PRIMARY KEY AUTO_INCREMENT," + "`playlistName` VARCHAR(100))";
         try (Statement statement = connection.createStatement()) {
             statement.execute(playListQuery);
 
@@ -18,7 +18,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
     };
 
     public void listCreater(Connection connection, String listName1) throws SQLException {
-        playlistRepository1.createListOfPlaylist(connection, listName1);
+        repositoryInterface.createListOfPlaylist(connection, listName1);
     }
 
     /**
@@ -29,7 +29,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
      * @param songId       The id of the song to be added to the playlist.
      * @return The method returns a boolean value.
      */
-    @Override
+
     public boolean addSongInPlayList(Connection connection, String playListName, int songId) throws SQLException {
 
         String insertQuery = "INSERT INTO`" + playListName + "` (`songId`,`songName`,`albumName`,`genre`,`artistName`,`songPath`)" + "select * From `jukebox`.`songs`where`songId`=?";
@@ -50,7 +50,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
      * @param songId       The id of the song to be removed from the playlist.
      * @return The method returns a boolean value.
      */
-    @Override
+
     public boolean removeSongFromPlayList(Connection connection, String playListName, int songId) throws SQLException {
         String removeQuery = "DELETE FROM `jukebox`.`" + playListName + "` WHERE (`songId` = ?);";
         int numberOfRowsAffected;
@@ -86,7 +86,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
             }
 
         }
-        System.out.println("given song is added in the playlist");
+
         return song;
     }
 
@@ -121,7 +121,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
      * @param connection   Connection object
      * @param playListName The name of the playlist to be created.
      */
-    @Override
+
     public void createPlayList(Connection connection, String playListName) throws SQLException {
         String playListQuery = "CREATE TABLE `" + playListName + "` (`songId` INT NOT NULL PRIMARY KEY ," + "`songName` VARCHAR(100),`albumName` VARCHAR(100),`genre` VARCHAR(100),`artistName` VARCHAR(100)," + "`songPath`VARCHAR(100));";
         try (Statement statement = connection.createStatement()) {
@@ -129,7 +129,7 @@ public class PlaylistRepository implements PlaylistRepositoryInterface {
         }
     }
 
-    public boolean addPlaylistInList(Connection connection, PlayList playList) throws SQLException {
+    public boolean addPlaylist(Connection connection, PlayList playList) throws SQLException {
         String insertQuery = "INSERT INTO `jukebox`.`listofplaylist` (`playListId`, `playListName`) VALUES (?, ?);";
 
         int numberOfRowsAffected;

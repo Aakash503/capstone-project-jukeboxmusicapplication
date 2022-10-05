@@ -4,9 +4,9 @@ import com.jdp.niit.model.PlayList;
 import com.jdp.niit.model.Song;
 import com.jdp.niit.repository.PlaylistRepository;
 import com.jdp.niit.repository.SongRepository;
-import com.jdp.niit.repository.SongsException;
 import com.jdp.niit.service.DatabaseService;
 import com.jdp.niit.service.MusicPlayerService;
+import com.jdp.niit.songexception.SongsException;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -88,19 +88,13 @@ public class Main {
                         System.out.println("find a song by Artist Name");
                         System.out.println("Enter song Artist name: ");
                         String artist = scanner.next();
-                        Song song1 = songRepository.findSongByArtistName(connection, artist);
-
-                        if (song1.getArtistName().equalsIgnoreCase(artist)) {
-                            System.out.println(song1);
-                        } else {
-                            System.err.println("No song found in the list");
-                        }
+                        songRepository.findSongByArtistName(connection, artist).forEach(System.out::println);
                         break;
 
                     case 5:
                         System.out.println("Enter songId: ");
                         int songId = scanner.nextInt();
-                        Song song2 = songRepository.findSongBySongId(connection, songId);
+                        Song song2 = songRepository.findSongById(connection, songId);
                         if (songId == song2.getSongId()) {
                             System.out.println(song2);
                         } else {
@@ -162,7 +156,7 @@ public class Main {
                         System.out.println("Enter your playlist name");
                         String listName = scanner.next();
                         PlayList p1 = new PlayList(id1, listName);
-                        boolean b2 = playlistRepository.addPlaylistInList(connection, p1);
+                        boolean b2 = playlistRepository.addPlaylist(connection, p1);
                         System.out.println(b2);
                         break;
 

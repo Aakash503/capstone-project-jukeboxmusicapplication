@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseService {
-    private final String URL = "jdbc:mysql://localhost:3306/jukebox";
-    private final String USERNAME = "root";
-    private final String PASSWORD = "Admin@123";
+    private static final String url = "jdbc:mysql://localhost:3306/jukebox";
+    private static final String userName = "root";
+    private static final String password = "Admin@123";
 
     private Connection connection;
 
@@ -23,7 +23,7 @@ public class DatabaseService {
     }
 
     public void connect() throws SQLException {
-        connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        connection = DriverManager.getConnection(url, userName, password);
     }
 
     public void printConnectionStatus() {
