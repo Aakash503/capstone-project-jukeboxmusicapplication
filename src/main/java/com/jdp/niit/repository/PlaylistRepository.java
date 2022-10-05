@@ -90,9 +90,9 @@ public class PlaylistRepository {
         return song;
     }
 
-    public List<Song> displayAllSongsInPlaylist(Connection connection, String playListName) throws SQLException {
+    public List<Song> displayAllSongsInPlaylist(Connection connection, PlayList playList) throws SQLException {
 
-        String readQuery = "SELECT * FROM `jukebox`.`" + playListName + "`;";
+        String readQuery = "SELECT * FROM `jukebox`.`" + playList.getName() + "`;";
         List<Song> songList = new ArrayList<>();
 
         try (Statement statement = connection.createStatement()) {

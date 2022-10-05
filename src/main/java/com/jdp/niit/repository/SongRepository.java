@@ -1,6 +1,7 @@
 package com.jdp.niit.repository;
 
 
+import com.jdp.niit.model.PlayList;
 import com.jdp.niit.model.Song;
 import com.jdp.niit.songexception.SongsException;
 
@@ -82,8 +83,8 @@ public class SongRepository {
 
     }
 
-    public Song findSongById(Connection connection, int id) throws SQLException, SongsException {
-        String searchQuery = "SELECT * FROM `jukebox`.`songs` WHERE(`songId` = ?);";
+    public Song findSongById(Connection connection, PlayList playList, int id) throws SQLException, SongsException {
+        String searchQuery = "SELECT * FROM `jukebox`.`" + playList.getName() + "` WHERE(`songId` = ?);";
         Song song = new Song();
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(searchQuery)) {

@@ -1,3 +1,4 @@
+import com.jdp.niit.model.PlayList;
 import com.jdp.niit.model.Song;
 import com.jdp.niit.repository.PlaylistRepository;
 import com.jdp.niit.service.DatabaseService;
@@ -58,8 +59,9 @@ class PlaylistRepositoryTest {
     void getAllSongs() throws SQLException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        List<Song> output = playlistRepository.displayAllSongsInPlaylist(connection, "myfavorate");
-        List<Song> expectedOutput = playlistRepository.displayAllSongsInPlaylist(connection, "myfavorate");
+        PlayList playList = new PlayList(1, "myfavorate");
+        List<Song> output = playlistRepository.displayAllSongsInPlaylist(connection, playList);
+        List<Song> expectedOutput = playlistRepository.displayAllSongsInPlaylist(connection, playList);
         Assertions.assertEquals(expectedOutput, output);
     }
 }

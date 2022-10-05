@@ -79,7 +79,10 @@ public class Main {
                     case 3:
                         System.out.println("Enter your Playlist name");
                         String playlistName = scanner.next();
-                        playlistRepository.displayAllSongsInPlaylist(connection, playlistName)
+                        System.out.println("Enter your Playlist Id");
+                        int playlistId = scanner.nextInt();
+                        PlayList playList1 = new PlayList(playlistId, playlistName);
+                        playlistRepository.displayAllSongsInPlaylist(connection, playList1)
                                 .forEach(System.out::println);
                         break;
 
@@ -94,7 +97,12 @@ public class Main {
                     case 5:
                         System.out.println("Enter songId: ");
                         int songId = scanner.nextInt();
-                        Song song2 = songRepository.findSongById(connection, songId);
+                        System.out.println("Enter playlistId: ");
+                        int playlistId1 = scanner.nextInt();
+                        System.out.println("Enter playlistName: ");
+                        String playlistName1 = scanner.next();
+                        PlayList playList2 = new PlayList(playlistId1, playlistName1);
+                        Song song2 = songRepository.findSongById(connection, playList2, songId);
                         if (songId == song2.getSongId()) {
                             System.out.println(song2);
                         } else {

@@ -1,3 +1,4 @@
+import com.jdp.niit.model.PlayList;
 import com.jdp.niit.model.Song;
 import com.jdp.niit.repository.SongRepository;
 import com.jdp.niit.service.DatabaseService;
@@ -34,8 +35,9 @@ class SongRepositoryTest {
     void getSongById() throws SQLException, SongsException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        Song output = songRepository.findSongById(connection, 1);
-        Song expectedOutput = songRepository.findSongById(connection, output.getSongId());
+        PlayList playList1 = new PlayList(2, "songs");
+        Song output = songRepository.findSongById(connection, playList1, 1);
+        Song expectedOutput = songRepository.findSongById(connection, playList1, output.getSongId());
         Assertions.assertEquals(expectedOutput, output);
     }
 
