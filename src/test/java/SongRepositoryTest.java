@@ -45,7 +45,7 @@ class SongRepositoryTest {
     void removeSong() throws SQLException, SongsException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        boolean Output = songRepository.removeSongFromSongs(connection, 13);
+        boolean Output = songRepository.removeSong(connection, 13);
         Assertions.assertTrue(Output);
 
     }

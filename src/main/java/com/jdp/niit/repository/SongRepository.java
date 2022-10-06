@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SongRepository {
+public class SongRepository implements Repository {
     public boolean addSong(Connection connection, Song song) throws SQLException {
         String insertQuery = "INSERT INTO `jukebox`.`songs` " + "( `songName`, `albumName`,`genre`,`artistName`,`songPath`) " + "VALUES ( ?, ?,?,?,?);";
         int numberOfRowsAffected;
@@ -26,6 +26,7 @@ public class SongRepository {
         return numberOfRowsAffected > 0;
     }
 
+    @Override
     public List<Song> displayAllSongs(Connection connection) throws SQLException {
 
         String readQuery = "SELECT * FROM `jukebox`.`songs`;";
@@ -114,7 +115,7 @@ public class SongRepository {
         }
     }
 
-    public boolean removeSongFromSongs(Connection connection, int songId) throws SQLException, SongsException {
+    public boolean removeSong(Connection connection, int songId) throws SQLException, SongsException {
         String removeQuery = "DELETE FROM `jukebox`.`songs` WHERE (`songId` = ?);";
         int numberOfRowsAffected;
         try (PreparedStatement preparedStatement = connection.prepareStatement(removeQuery)) {

@@ -77,15 +77,9 @@ public class Main {
                         break;
 
                     case 3:
-                        System.out.println("Enter your Playlist name");
-                        String playlistName = scanner.next();
-                        System.out.println("Enter your Playlist Id");
-                        int playlistId = scanner.nextInt();
-                        PlayList playList1 = new PlayList(playlistId, playlistName);
-                        playlistRepository.displayAllSongsInPlaylist(connection, playList1)
+                        playlistRepository.displayAllSongs(connection)
                                 .forEach(System.out::println);
                         break;
-
 
                     case 4:
                         System.out.println("find a song by Artist Name");
@@ -142,18 +136,16 @@ public class Main {
                         break;
 
                     case 10:
-                        System.out.println("Enter the playlist name");
-                        String name = scanner.next();
                         System.out.println("Enter the songId");
                         int snid = scanner.nextInt();
-                        boolean result = playlistRepository.removeSongFromPlayList(connection, name, snid);
+                        boolean result = playlistRepository.removeSong(connection, snid);
                         System.out.println(result);
                         break;
 
                     case 11:
                         System.out.println("enter the songId of Song you want to delete");
                         int sid1 = scanner.nextInt();
-                        boolean b1 = songRepository.removeSongFromSongs(connection, sid1);
+                        boolean b1 = songRepository.removeSong(connection, sid1);
                         System.out.println(b1);
                         break;
 

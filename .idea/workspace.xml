@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b34a63-6361-4e65-9c78-12c9b0cdb26f" name="Changes" comment="final commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/Repository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jdp/niit/repository/PlaylistRepository.java" afterDir="false" />
@@ -66,7 +66,7 @@
       <recent name="C:\Users\acer\IdeaProjects\capstone-project-jukebox\src\main\resources\songs" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.getAllSongs">
+  <component name="RunManager" selected="JUnit.PlaylistRepositoryTest.addMethod">
     <configuration name="com.jdp.niit.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.jdp.niit.Main" />
       <module name="capstone-project-jukebox" />
@@ -76,6 +76,26 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistRepositoryTest.addMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-project-jukebox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
+      <option name="METHOD_NAME" value="addMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaylistRepositoryTest.deleteSongFromPlaylist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="capstone-project-jukebox" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaylistRepositoryTest" />
+      <option name="METHOD_NAME" value="deleteSongFromPlaylist" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,26 +120,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongRepositoryTest.getSongByArtistName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capstone-project-jukebox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
-      <option name="METHOD_NAME" value="getSongByArtistName" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SongRepositoryTest.getSongById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="capstone-project-jukebox" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SongRepositoryTest" />
-      <option name="METHOD_NAME" value="getSongById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Write tests for class PlaylistRepository" type="com.diffblue.cover.write-tests-run-configuration" factoryName="com.diffblue.cover.write-tests-run-configuration">
       <module name="capstone-project-jukebox" />
       <settings run-config-name="Write tests for class PlaylistRepository" include-system-env-vars="true">
@@ -131,11 +131,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PlaylistRepositoryTest.addMethod" />
+        <item itemvalue="JUnit.PlaylistRepositoryTest.deleteSongFromPlaylist" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.getAllSongs" />
         <item itemvalue="Application.com.jdp.niit.Main" />
-        <item itemvalue="JUnit.SongRepositoryTest.getSongById" />
         <item itemvalue="JUnit.PlaylistRepositoryTest.getSongById" />
-        <item itemvalue="JUnit.SongRepositoryTest.getSongByArtistName" />
       </list>
     </recent_temporary>
   </component>
@@ -147,13 +147,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663677254737</updated>
-    </task>
-    <task id="LOCAL-00017" summary="created constructors in PlayList.java class">
-      <created>1663725965369</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1663725965369</updated>
     </task>
     <task id="LOCAL-00018" summary="created getters and setters in PlayList.java class">
       <created>1663726090677</created>
@@ -491,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664976989185</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="final commit">
+      <created>1664979455352</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1664979455352</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

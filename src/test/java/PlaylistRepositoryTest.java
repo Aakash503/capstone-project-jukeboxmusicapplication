@@ -1,4 +1,3 @@
-import com.jdp.niit.model.PlayList;
 import com.jdp.niit.model.Song;
 import com.jdp.niit.repository.PlaylistRepository;
 import com.jdp.niit.service.DatabaseService;
@@ -50,7 +49,7 @@ class PlaylistRepositoryTest {
     void deleteSongFromPlaylist() throws SQLException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        boolean Output = playlistRepository.removeSongFromPlayList(connection, "myfavorate", 15);
+        boolean Output = playlistRepository.removeSong(connection, 10);
         Assertions.assertTrue(Output);
 
     }
@@ -59,9 +58,8 @@ class PlaylistRepositoryTest {
     void getAllSongs() throws SQLException {
         databaseService.connect();
         Connection connection = databaseService.getConnection();
-        PlayList playList = new PlayList(1, "myfavorate");
-        List<Song> output = playlistRepository.displayAllSongsInPlaylist(connection, playList);
-        List<Song> expectedOutput = playlistRepository.displayAllSongsInPlaylist(connection, playList);
+        List<Song> output = playlistRepository.displayAllSongs(connection);
+        List<Song> expectedOutput = playlistRepository.displayAllSongs(connection);
         Assertions.assertEquals(expectedOutput, output);
     }
 }
