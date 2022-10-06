@@ -1,14 +1,18 @@
 package com.jdp.niit.model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class PlayList {
     private final int id;
     private final String name;
+    List<Song> songList;
 
     public PlayList(int id, String name) {
         this.id = id;
         this.name = name;
+        songList = new ArrayList<>();
     }
 
     public int getId() {
